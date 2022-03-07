@@ -1,6 +1,11 @@
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
+
 ### Project Description
+#### Our project is based around the topic of food. Everyone loves food and it is essential to our health, so who would pass up the opportunity to make a project around something we love? 
+## [Scrum Board]()
+## Website Home Page
+
 
 
 
