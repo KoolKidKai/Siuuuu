@@ -9,7 +9,7 @@ We love diversity and also girls in comp sci, but we don't have any girls unfort
 
 
 
-Week0
+Week 0
 =======
 Setup roles for team members.
 
