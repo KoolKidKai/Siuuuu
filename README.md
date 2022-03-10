@@ -1,14 +1,14 @@
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
 
-### [Project Description](https://github.com/KoolKidKai/Siuuuu/wiki)
-## [Team Roles and Project Sponsors](https://github.com/KoolKidKai/Siuuuu/wiki/Team-and-Sponsors)
-### [Plans & Policies](https://github.com/KoolKidKai/Siuuuu/wiki/Plans-Policies)
-## [Push/Pull Procedure](https://github.com/KoolKidKai/Siuuuu/wiki/Push-Pull-Procedure)
-### [Scrum Board](https://github.com/KoolKidKai/Siuuuu/projects/1)
-### [Web Project](https://github.com/KoolKidKai/Siuuuu/wiki/Web-Project)
-### Weekly TPT's
-## [Week 0 TPT](https://github.com/KoolKidKai/Siuuuu/wiki/Week-0-TPT)
+## [Project Description](https://github.com/KoolKidKai/Siuuuu/wiki)
+### [Team Roles and Project Sponsors](https://github.com/KoolKidKai/Siuuuu/wiki/Team-and-Sponsors)
+## [Plans & Policies](https://github.com/KoolKidKai/Siuuuu/wiki/Plans-Policies)
+### [Push/Pull Procedure](https://github.com/KoolKidKai/Siuuuu/wiki/Push-Pull-Procedure)
+## [Scrum Board](https://github.com/KoolKidKai/Siuuuu/projects/1)
+## [Web Project](https://github.com/KoolKidKai/Siuuuu/wiki/Web-Project)
+## Weekly TPT's
+### [Week 0 TPT](https://github.com/KoolKidKai/Siuuuu/wiki/Week-0-TPT)
 
 
 
