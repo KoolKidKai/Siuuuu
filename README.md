@@ -99,6 +99,7 @@ Our project is dedicated to the learning, improvement, and utmost enjoyment of c
 - Design a nice and appealing website for everyone to read easily
 ### [Wireframe](https://docs.google.com/drawings/d/1UfPqEDXEEcWHStgHxJzHTTz78GcYTPCZ8vMpj08az-s/edit?usp=sharing)
 <img width="936" alt="Screen Shot 2022-03-11 at 1 49 33 PM" src="https://user-images.githubusercontent.com/60719508/157975270-60091694-33cc-4b86-96df-5b34e672d345.png">
+![Hard](https://user-images.githubusercontent.com/89219486/157976106-eafdf57c-cfd6-4fe2-b154-b8301aa7f390.png)
 
 ## [Time Box](https://github.com/KoolKidKai/Siuuuu/blob/main/README.md)
 
