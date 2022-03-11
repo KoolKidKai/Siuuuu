@@ -100,6 +100,9 @@ Our project is dedicated to the learning, improvement, and utmost enjoyment of c
 ### [Wireframe](https://docs.google.com/drawings/d/1UfPqEDXEEcWHStgHxJzHTTz78GcYTPCZ8vMpj08az-s/edit?usp=sharing)
 <img width="936" alt="Screen Shot 2022-03-11 at 1 49 33 PM" src="https://user-images.githubusercontent.com/60719508/157975270-60091694-33cc-4b86-96df-5b34e672d345.png">
 
+### Beginner Level
+<img width="838" alt="Screen Shot 2022-03-11 at 2 02 47 PM" src="https://user-images.githubusercontent.com/89277945/157976571-60d6ed15-2571-4d8d-a9ed-980d1b90a81e.png">
+
 
 ### Intermediate Level 
 <img width="861" alt="Screen Shot 2022-03-11 at 2 00 56 PM" src="https://user-images.githubusercontent.com/60719508/157976369-4dfac059-fb48-41a2-be5d-94465d7affa9.png">
