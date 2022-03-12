@@ -1,7 +1,54 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/layout.html" %}
+{% include "layouts/layout.html" %}
 
 <!-- Setting up variables to customize "project" details to be specific to index page -->
 {% set project = "Hack Club" %}
 {% set overview = "https://github.com/KoolKidKai/Siuuuu" %}
+<head>
+    <style>
+        body {
+            background-image: url("https://studentsoftheworld.info/sites/sport/img/21108_picture_cristiano_ronaldo_138.jpg");
+            background-color: #cccccc;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            text-align: center;
+            color: cyan;
 
+        }
+        form{
+            color: green;
+            position:fixed;
+            left:150px;
+            bottom: 150px;
+            right:150px;
+        }
+        h4 {
+            position:fixed;
+            left:150px;
+            bottom: 250px;
+            right:150px
+        }
+    </style>
+</head>
+<h4>
+    Level 1 (Beginner) Question: What code do you have to write in order to print out the phrase "Hello World" without the quotes?
+</h4>
+<form>
+    <label for="level1">Enter Code Here</label><br>
+    <input type="text" id="level1" name="level1" required><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    const level1 = document.getElementById('level1');
+    function newLocation() {
+        window.location.href="level2.html";
+    }
+    if ( level1 == 'print("Hello World")' ) {
+        newLocation();
+    } else {
+        print("Wrong Answer");
+    }
+</script>
