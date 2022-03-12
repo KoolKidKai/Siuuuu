@@ -1,20 +1,92 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+    <a class="navbar-brand" href="https://github.com/NoahJ214/Team-Aaiaa-Project-Tri-2">{{name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('kangaroos') }}>Kangaroos</a>
-            <a class="nav-link" href={{ url_for('walruses') }}>Walruses</a>
-            <a class="nav-link" href={{ url_for('hawkers') }}>Hawkers</a>
-            <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">Stub</a>
+            <!--root menu -->
+            <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    Levels (Beginner)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/level1/">Level 1</a>
+                    <a class="dropdown-item" href="/level2/">Level 2</a>
+                    <a class="dropdown-item" href="/level3/">Level 3</a>
+                    <a class="dropdown-item" href="/level4/">Level 4</a>
+                    <a class="dropdown-item" href="/level5/">Level 5</a>
+
+
+                </div>
+            </li>
         </div>
     </div>
 </nav>
+</html>
+
+<style>
+    .dark-mode {
+        background: black;
+        color: white;
+    }
+</style>
+
+<script>
+    var clockElement = document.getElementById('clock');
+
+    function clock() {
+        var date = new Date();
+
+        // Replace '400px' below with where you want the format to change.
+        if (window.matchMedia('(max-width: 400px)').matches) {
+            // Use this format for windows with a width up to the value above.
+            clockElement.textContent = date.toLocaleString();
+        } else {
+            // While this format will be used for larger windows.
+            clockElement.textContent = date.toString();
+        }
+    }
+
+    setInterval(clock, 1000);
+
+    function dark() {
+        var element = document.getElementById('navbarNavAltMarkup');
+        element.classList.toggle("dark-mode");
+    }
+
+
+    const search = document.getElementById('search');
+    const google = 'https://www.google.com/search?q=site%3A+';
+    const site = 'https://aaiaa.crabdance.com/';
+
+    function submitted(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const url = google
+                + site
+                + '+'
+                + search.value;
+            const win = window.open(url, '_blank');
+            win.focus();
+        }
+    }
+    search.addEventListener('keypress', submitted);
+</script>
