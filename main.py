@@ -11,9 +11,9 @@ def index():
     return render_template("index.html")
 
 
-#@app.route('/beginner')
-#def level1():
-#    return render_template("level1.html")
+@app.route('/level1')
+def level1():
+    return render_template("level1.html")
 
 
 # runs the application on the development server
