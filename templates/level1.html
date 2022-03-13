@@ -42,11 +42,14 @@
 </form>
 
 <script>
+    function locationchange(){
+        location.href='/level2';
+    }
     function response() {
         const level1 = document.getElementById('level1');
-        const answer1 = 'print("Hello World")'
+        const answer1 = 'print("Hello World")';
         if (level1.value==answer1) {
-            location.href='/level2/';
+            locationchange();
         } else {
             window.alert("Wrong Answer! Try again")
         }
