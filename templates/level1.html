@@ -47,9 +47,10 @@
     }
     function response() {
         const level1 = document.getElementById('level1');
-        const answer1 = 'print("Hello World")';
+        const answer1 = "print('Hello World')";
         if (level1.value==answer1) {
-            locationchange();
+            window.location.href='level2.html'
+            window.alert("Correct")
         } else {
             window.alert("Wrong Answer! Try again")
         }
