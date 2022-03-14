@@ -114,6 +114,10 @@ Our project is dedicated to the learning, improvement, and utmost enjoyment of c
 
 # Time Box
 
+Week Number | Review Ticket | Links to Tangibles |
+----- | ----- | ----- |
+Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
+
 ## Weekly TPT's
 ### Week 0 TPT
 
