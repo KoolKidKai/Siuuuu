@@ -112,7 +112,7 @@ Our project is dedicated to the learning, improvement, and utmost enjoyment of c
 ![image](https://user-images.githubusercontent.com/89219486/157976238-8e720aac-2049-4001-b1fc-0f1649d8317d.png)
 
 
-## [Time Box](https://github.com/KoolKidKai/Siuuuu/blob/main/README.md)
+# Time Box
 
 ## Weekly TPT's
 ### Week 0 TPT
