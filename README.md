@@ -1,3 +1,5 @@
+{% include navigation.html %}
+
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
 
@@ -20,7 +22,7 @@ What is HackClub?
 ## Issues Policies
 - Ideas are to be made into issues, placed in the to-do list and discussed
 - Rejected ideas are to be placed in archive
-- Approved ideas are to be placed in progress and assigned 
+- Approved ideas are to be placed in progress and assigned atio
 - Once completed, review with team and either keep in progress or move to completed by the person assigned
 
 ## Contributing Policies
