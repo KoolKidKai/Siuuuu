@@ -16,3 +16,34 @@ Rishi and Arnav --> HackClub
 
 What is HackClub?
 - This is a club on campus that helps students find their interest in coding, and overall become more passionate in the field.
+
+### Contact Info
+
+<table>
+ <tr>
+  <th>Name</th>
+  <th>Role</th>
+  <th>Phone Number</th>
+  <th>Email</th>
+ </tr>
+ 
+ <tr>
+  <td>Arnav Palkiwhala</td>
+  <td>Club President</td>
+  <td>(858)922-5158</td>
+  <td>Needed</td>
+ </tr>
+ 
+ <tr>
+  <td>Rishi Peddakama</td>
+  <td>Club Vice President</td>
+  <td>(858)527-5010</td>
+  <td>Needed</td>
+ </tr>
+ 
+ <tr>
+  <td>Colin Howard</td>
+  <td>Scrum Team Leader</td>
+  <td>(678)237-1920</td>
+  <td>colin.howard415@icloud.com</td>
+ </tr>
