@@ -1,6 +1,12 @@
 {% include navigation.html %}
 
 ## Plans/Ideas/Wires
+
+### Owner Requirements
+ - Club calendar with events and time info
+ - Roster page detailing members, roles, info
+
+
 ### Ideas
 - Goal is to have the user interact with the website frequently
 - Beginner coders must be entertained and attracted to the website; needs to be nicely designed
