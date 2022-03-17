@@ -5,7 +5,7 @@
 Week Number | Review Ticket | Links to Tangibles |
 ----- | ----- | ----- |
 Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
-Week 1 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Tangibles]()
+Week 1 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Tangibles](https://github.com/KoolKidKai/Siuuuu/issues/14)
 
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
