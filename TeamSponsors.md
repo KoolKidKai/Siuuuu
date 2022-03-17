@@ -31,14 +31,14 @@ What is HackClub?
   <td>Arnav Palkiwhala</td>
   <td>Club President</td>
   <td>(858)922-5158</td>
-  <td>Needed</td>
+  <td>palkhiwala.arnav@gmail.com</td>
  </tr>
  
  <tr>
   <td>Rishi Peddakama</td>
   <td>Club Vice President</td>
   <td>(858)527-5010</td>
-  <td>Needed</td>
+  <td>rishipeddakama@gmail.com</td>
  </tr>
  
  <tr>
