@@ -7,6 +7,8 @@ Week Number | Review Ticket | Links to Tangibles |
 Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
 Week 1 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Level 1 - 4 Issue](https://github.com/KoolKidKai/Siuuuu/issues/14)
 
+## [Team Scrum Board](https://github.com/KoolKidKai/Siuuuu/projects/1)
+
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
 
@@ -34,7 +36,7 @@ Our project is dedicated to the learning, improvement, and utmost enjoyment of c
 - Always pull before a push to avoid merge conflicts
 - Pull requests/branches as of now will not be used but may be potentially incorporated in the future depending on the project
 
-## [Scrum Board](https://github.com/KoolKidKai/Siuuuu/projects/1)
+
 
 ## Web Project
 
