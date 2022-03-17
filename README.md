@@ -2,7 +2,7 @@
 
 # Time Box
 
-Week Number | Review Ticket | Links to Tangibles |
+Week Number | Review Ticket | Links to Derivative Tangibles |
 ----- | ----- | ----- |
 Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
 Week 1 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Level 1 - 4 Issue](https://github.com/KoolKidKai/Siuuuu/issues/14)
