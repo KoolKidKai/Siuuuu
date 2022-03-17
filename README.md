@@ -1,5 +1,12 @@
 {% include navigation.html %}
 
+# Time Box
+
+Week Number | Review Ticket | Links to Tangibles |
+----- | ----- | ----- |
+Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
+Week 1 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Tangibles]()
+
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
 
@@ -77,13 +84,6 @@ When committing, use your personal branch until your feature is complete and wor
 ## Description
 Our project is dedicated to the learning, improvement, and utmost enjoyment of coding! We aspire to help beginners improve their coding ability by implementing a series of levels that increase difficulty as they complete the tasks. By the end, they should see themselves as better programmers than before while also having enjoyed the journey. We are Team Siuuuu and are sponsored by Hackclub, a group of coders hoping to teach beginner coders.
 
-
-# Time Box
-
-Week Number | Review Ticket | Links to Tangibles |
------ | ----- | ----- |
-Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
-
 ## Weekly TPT's
 ### Week 0 TPT
 
@@ -97,13 +97,6 @@ Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Gith
 - A division in access of technology; CSP brings technology people together
 - Degree in computer science can help get jobs and big companies; technology is the future
 - Barriers or red tape restrictions on digital usage; different barriers in different places (ie. Del Norte# )
-
-
-
-
-Week 0
-=======
-
 
 
 
