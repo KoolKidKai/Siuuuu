@@ -7,7 +7,9 @@ Week Number | Review Ticket | Links to Derivative Tangibles |
 Week 0 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
 Week 1 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Level 1 - 4 Issue](https://github.com/KoolKidKai/Siuuuu/issues/14)
 
-## [Team Scrum Board](https://github.com/KoolKidKai/Siuuuu/projects/1)
+## [Scrum Board](https://github.com/KoolKidKai/Siuuuu/projects/1)
+
+## [Team Replit](https://replit.com/@ColinHoward3/Siuuuu-2#.replit)
 
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
@@ -42,20 +44,6 @@ Our project is dedicated to the learning, improvement, and utmost enjoyment of c
 
 ## Description
 Our project is dedicated to the learning, improvement, and utmost enjoyment of coding! We aspire to help beginners improve their coding ability by implementing a series of levels that increase difficulty as they complete the tasks. By the end, they should see themselves as better programmers than before while also having enjoyed the journey. We are Team Siuuuu and are sponsored by Hackclub, a group of coders hoping to teach beginner coders.
-
-## Weekly TPT's
-### Week 0 TPT
-
-# Week 0 TPT Notes
-
-## Computing
-- Can be harmful due to dopamine addiction --> Results in lack of desire to complete important things
-- Example of Anthony Rosner and addiction to World of Warcraft; depleted him of real world skills and made him lazy
-
-## Digital Divide
-- A division in access of technology; CSP brings technology people together
-- Degree in computer science can help get jobs and big companies; technology is the future
-- Barriers or red tape restrictions on digital usage; different barriers in different places (ie. Del Norte# )
 
 
 
