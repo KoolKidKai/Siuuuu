@@ -1,0 +1,8 @@
+body {
+    background-image: url("https://studentsoftheworld.info/sites/sport/img/21108_picture_cristiano_ronaldo_138.jpg");
+    background-color: #cccccc;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

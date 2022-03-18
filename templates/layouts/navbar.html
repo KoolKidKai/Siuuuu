@@ -1,0 +1,105 @@
+<!-- Navigation Bar from bootstrap
+This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
+-->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="https://github.com/NoahJ214/Team-Aaiaa-Project-Tri-2">{{name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <!--root menu -->
+            <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    Levels (Beginner)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href={{ url_for('level1') }}>Level 1</a>
+                    <a class="dropdown-item" href="/level2/">Level 2</a>
+                    <a class="dropdown-item" href="/level3/">Level 3</a>
+                    <a class="dropdown-item" href="/level4/">Level 4</a>
+                    <a class="dropdown-item" href="/level5/">Level 5</a>
+                    <a class="dropdown-item" href="/level6/">Level 6</a>
+                    <a class="dropdown-item" href="/level7/">Level 7</a>
+                    <a class="dropdown-item" href="/level8/">Level 8</a>
+                    <a class="dropdown-item" href="/level9/">Level 9</a>
+                    <a class="dropdown-item" href="/level10/">Level 10</a>
+
+
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    Levels (Intermediate)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/level11/">Level 11</a>
+                    <a class="dropdown-item" href="/level12/">Level 12</a>
+                    <a class="dropdown-item" href="/level13/">Level 13</a>
+                    <a class="dropdown-item" href="/level14/">Level 14</a>
+                    <a class="dropdown-item" href="/level15/">Level 15</a>
+                    <a class="dropdown-item" href="/level16/">Level 16</a>
+                    <a class="dropdown-item" href="/level17/">Level 17</a>
+                    <a class="dropdown-item" href="/level18/">Level 18</a>
+                    <a class="dropdown-item" href="/level19/">Level 19</a>
+                    <a class="dropdown-item" href="/level20/">Level 20</a>
+
+
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">
+                    Levels (Advanced)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <a class="dropdown-item" href="/level21/">Level 21</a>
+                    <a class="dropdown-item" href="/level22/">Level 22</a>
+                    <a class="dropdown-item" href="/level23/">Level 23</a>
+                    <a class="dropdown-item" href="/level24/">Level 24</a>
+                    <a class="dropdown-item" href="/level25/">Level 25</a>
+                    <a class="dropdown-item" href="/level26/">Level 26</a>
+                    <a class="dropdown-item" href="/level27/">Level 27</a>
+                    <a class="dropdown-item" href="/level28/">Level 28</a>
+                    <a class="dropdown-item" href="/level29/">Level 29</a>
+                    <a class="dropdown-item" href="/level30/">Level 30</a>
+
+
+                </div>
+            </li>
+            <div class="navbar-nav">
+                <!--root menu -->
+                <a class="nav-link" href="/prizes">Prizes <span class="sr-only"></span></a>
+
+
+                </div>
+            <div class="navbar-nav">
+                <!--root menu -->
+                <a class="nav-link" href="/viewpoints">View Points <span class="sr-only"></span></a>
+
+
+            </div>
+            <div class="navbar-nav">
+                <!--root menu -->
+                <a class="nav-link" href="/replitlink">Link to Replit Account <span class="sr-only"></span></a>
+
+
+            </div>
+            </li>
+        </div>
+    </div>
+</nav>
+</html>
