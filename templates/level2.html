@@ -1,5 +1,57 @@
 {% include "layouts/layout.html" %}
 
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% include "layouts/layout.html" %}
+
 <!-- Setting up variables to customize "project" details to be specific to index page -->
 {% set project = "Hack Club" %}
 {% set overview = "https://github.com/KoolKidKai/Siuuuu" %}
+<head>
+    <style>
+        body {
+            background-image: url("https://studentsoftheworld.info/sites/sport/img/21108_picture_cristiano_ronaldo_138.jpg");
+            background-color: #cccccc;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            text-align: center;
+            color: cyan;
+
+        }
+        form{
+            color: green;
+            position:fixed;
+            left:150px;
+            bottom: 150px;
+            right:150px;
+        }
+        h5 {
+            position:fixed;
+            left:150px;
+            bottom: 250px;
+            right:150px
+        }
+    </style>
+</head>
+<h5>
+    Level 1 (Beginner) Question: How do you define a function in python?
+</h5>
+<form>
+    <label for="level2">Enter Code Here</label><br>
+    <input type="text" id="level2" name="level2" required><br>
+    <input type="button" value="Submit Answer" onclick="response()">
+</form>
+
+<script>
+    function response() {
+        const level2 = document.getElementById('level2');
+        const answer2 = "def";
+        if (level2.value==answer1) {
+            window.location.href='level2.html'
+            window.alert("Correct")
+        } else {
+            window.alert("Wrong Answer! Try again")
+        }
+    }
+</script>
