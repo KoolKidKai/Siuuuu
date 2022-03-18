@@ -11,6 +11,13 @@ Week 1 | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Leve
 
 ## [Team Replit](https://replit.com/@ColinHoward3/Siuuuu-2#.replit)
 
+# Individual Github Pages
+
+### 1. [Colin Howard (Scrum Master)](https://koolkidkai.github.io/Siuuuu/)
+### 2. [Ritvik Keerthi (Technical Officer)](https://ritvik-keerthi.github.io/Ritvik-Keerthi-CSP4/)
+### 3. [Tanay Rayavarapu (Deployment Manager and Github Admin)](https://tanay101405.github.io/TanayRayavarapu/)
+### 4. [Armaan Shamsaasef (Design Manager)](https://xxaasxx.github.io/Armaan-Shamsaasef-2-/)
+
 # Siuuuu
 We love diversity and also girls in comp sci, but we don't have any girls unfortunately. But we do have diversity. Go NightHawks!
 
