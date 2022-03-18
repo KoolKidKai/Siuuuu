@@ -3,8 +3,10 @@
 ## Plans/Ideas/Wires
 
 ### Owner Requirements
- - Club calendar with events and time info
- - Roster page detailing members, roles, info
+ - Allow easy access for each member (Organization: Example of this is a Club calendar with events and time information)
+ - Roster page detailing members, roles, info (This makes it easy for students and others to contact the right people if needed assistance)
+ - Make the website appealing to coders (Just asking for students to write code is boring, so how we can change that is to add funny images and vibrant colors)
+ - Add prizes to be able to push each coder to the next level. This allows people in the club not to get bored of coding and most importantly have fun when doing so in a friendly competition style.
 
 
 ### Ideas
