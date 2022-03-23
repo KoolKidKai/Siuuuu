@@ -1,5 +1,7 @@
 {% include navigation.html %}
 
+{% include sponsornavbar.html %}
+
 # Team and Roles
 
 Role | Person | Description 
