@@ -31,3 +31,12 @@ Feedback:
 - The website should show more sophistication than just for kids because it is hackclub
 - Focus on one specific target audience, such as freshmen (new coders in high school)
 - Implement a Technical Plan such as a UML Diagram or flowchart
+
+Week Improvements:
+- Evidence of wireframe design change to cater to younger audience and display Hackclub sponsor
+- The wireframe also implements coding features to match a more mature theme (decreasing use of Ronaldo)
+
+
+- Evidence of Technical Plan (flowchart/UML Diagram) outlining our project development proecudure:
+
+- [Evidence of code commit to change up the project theme]()
