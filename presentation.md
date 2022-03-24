@@ -26,4 +26,12 @@
 
 - Hosting plan and PII concerns by end of week
 
-# Result of Review
+## Result of Review
+
+### Mortensen Team Grade Frixay (3/18/22): 1.95/2
+
+Feedback: 
+- Emphasis on coding, rather than focusing on Ronaldo
+- The website should show more sophistication than just for kids because it is hackclub
+- Focus on one specific target audience, such as freshmen (new coders in high school)
+- Implement a Technical Plan such as a UML Diagram or flowchart
