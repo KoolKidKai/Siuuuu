@@ -3,7 +3,7 @@
 # Deployment Policy
 Everyone have the assignment pushed so that the website is ready to deploy by 12:00 AM on Thursday of every week
 
-[Deployed Website](https://tanayteamfood.tk/)
+[Deployed Website]()
 
 # Deployment Manager Backup List
 1. Tanay
