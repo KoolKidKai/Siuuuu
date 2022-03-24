@@ -6,7 +6,7 @@ Week Number/Title | Review Ticket | Links to Derivative Tangibles |
 ----- | ----- | ----- |
 Week 0/ Plans, Teams, and Jobs | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/10) | [Github Pages](https://koolkidkai.github.io/Siuuuu/) |
 Week 1/ Lists and Loops | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/17) | [Level 1 - 4 Issue](https://github.com/KoolKidKai/Siuuuu/issues/14)
-Week 2/ Classy Functions | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/24) | [Sponsor Presentation](https://koolkidkai.github.io/Siuuuu/sponsorInfo) |
+Week 2/ Classy Functions | [Review Ticket](https://github.com/KoolKidKai/Siuuuu/issues/24) | [Sponsor Presentation](https://koolkidkai.github.io/Siuuuu/presentation) |
 
 ## [Scrum Board](https://github.com/KoolKidKai/Siuuuu/projects/1)
 
