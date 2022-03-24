@@ -24,6 +24,18 @@
 
 ## Result of Review
 
+### Hacklub Sponsor Review
+
+Concerns:
+- How to secure personal information for users without any online bias
+- Similar to Mr. Mortensen, they want to balance a website that is enjoyable and mature
+- Ensure ease of use through a user-friendly interface/UI
+- Do not make website too repetetive, change some features up
+
+Appreciation:
+- Liked the beginner, intermediate, and advanced levels of the code
+
+
 ### Mortensen Team Score Friday (3/18/22): 1.95/2
 
 Feedback: 
