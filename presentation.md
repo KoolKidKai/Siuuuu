@@ -38,7 +38,9 @@ Week Improvements:
 
 
 - Evidence of Technical Plan (flowchart/UML Diagram) outlining our project development proecudure:
+![image](https://user-images.githubusercontent.com/89219634/159999522-1734f518-8080-4032-98cf-d120aade16a3.png)
 
+  - Main Github page navbar plans
 ![image](https://user-images.githubusercontent.com/89219634/159996637-dd018e88-617f-4bac-bf47-6758df879c9e.png)
 
 - [Evidence of code commit to change up the project theme]()
