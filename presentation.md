@@ -25,3 +25,5 @@
   - UML diagrams, subsystems, etc.
 
 - Hosting plan and PII concerns by end of week
+
+# Result of Review
