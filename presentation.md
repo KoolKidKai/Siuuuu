@@ -28,7 +28,7 @@
 
 ## Result of Review
 
-### Mortensen Team Grade Frixay (3/18/22): 1.95/2
+### Mortensen Team Score Friday (3/18/22): 1.95/2
 
 Feedback: 
 - Emphasis on coding, rather than focusing on Ronaldo
