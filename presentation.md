@@ -39,4 +39,7 @@ Week Improvements:
 
 - Evidence of Technical Plan (flowchart/UML Diagram) outlining our project development proecudure:
 
+![image](https://user-images.githubusercontent.com/89219634/159996032-f94d2d85-8b34-49f2-b4df-cef2eab67820.png)
+
+
 - [Evidence of code commit to change up the project theme]()
