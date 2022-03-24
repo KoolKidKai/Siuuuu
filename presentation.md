@@ -6,10 +6,6 @@
 
 ## This Week's Accomplishments
 
-- Added the MIT license as requested
-
-![image](https://user-images.githubusercontent.com/89219486/159780557-bbdc4de6-afcd-435a-8a89-f80fc60ccc6b.png)
-
 - Included new contact info
 - Improved user interface and organization of navbar/tabs
 
