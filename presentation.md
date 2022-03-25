@@ -37,6 +37,12 @@
 ### [Hard Level](https://docs.google.com/drawings/d/1xS9lfiLsZeyerM02AEuUiaQtJ_BUypiATzwIu97Bl5Y/edit)
 <img width="844" alt="Screen Shot 2022-03-24 at 1 09 00 PM" src="https://user-images.githubusercontent.com/89277945/160001430-19b1607e-3091-4de3-880d-e64c9fbfe5f7.png">
 
+### HTML Pages
+- Brief overview of what beginner levels will look like
+- As we advance further and further, there will be a use for replit, which will be incorporated onto our website.
+
+![image](https://user-images.githubusercontent.com/89219486/160050444-cd9d81c1-3de8-456d-8e76-836859b488b6.png)
+
 ## Result of Review
 
 ### HackClub Sponsor Review
