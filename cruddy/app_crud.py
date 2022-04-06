@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, request, url_for, redirect, jsonif
 from flask_login import login_required
 
 from cruddy.query import *
+from cruddy.query import logout
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
@@ -46,6 +47,9 @@ def crud_login():
     # if not logged in, show the login page
     return render_template("login.html")
 
+@app_crud.route('/logout/', methods=["GET", "POST"])
+def crud_logout():
+    logout()
 
 @app_crud.route('/authorize/', methods=["GET", "POST"])
 def crud_authorize():

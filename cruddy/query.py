@@ -94,15 +94,15 @@ def user_loader(user_id):
 
 
 # Authorise new user requires user_name, email, password
-def authorize(name, email, password):
-    if is_user(email, password):
+def authorize(name, email, password, phone):
+    if is_user(email, password, phone):
         return False
     else:
         auth_user = Users(
             name=name,
             email=email,
             password=password,
-            phone="1234567890"  # this should be added to authorize.html
+            phone=phone  # this should be added to authorize.html
         )
         # encrypt their password and add it to the auth_user object
         auth_user.create()
