@@ -9,9 +9,6 @@ from cruddy.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
-@app.route("/home")
-
-
 # Route for handling the login page logic
 
 
@@ -28,7 +25,6 @@ def index():
 @login_required
 @app.route('/level1', methods=['GET', 'POST'])
 def login():
-    #Error I guess
     error = None
     if request.method == 'POST':
         if request.form['username'] != 'SIUUU' or request.form['password'] != 'coding':
