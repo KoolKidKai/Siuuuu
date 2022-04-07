@@ -45,11 +45,11 @@ def crud_login():
             return redirect(url_for('crud.crud'))
 
     # if not logged in, show the login page
-    return render_template("login.html")
+    return render_template("login2.html")
 
 @app_crud.route('/logout/', methods=["GET", "POST"])
 def crud_logout():
-    logout()
+    return render_template("login.html")
 
 @app_crud.route('/authorize/', methods=["GET", "POST"])
 def crud_authorize():
