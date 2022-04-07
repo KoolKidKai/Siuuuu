@@ -19,6 +19,7 @@ def index():
 @login_required
 @app.route('/', methods=['GET', 'POST'])
 def login():
+    #Error I guess
     error = None
     if request.method == 'POST':
         if request.form['username'] != 'SIUUU' or request.form['password'] != 'coding':
