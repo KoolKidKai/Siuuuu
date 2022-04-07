@@ -10,23 +10,15 @@ app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
 @app.route("/home")
-def index():
-    return render_template("index.html")
+
 
 # Route for handling the login page logic
 
 
-@login_required
-@app.route('/', methods=['GET', 'POST'])
-def login():
-    #Error I guess
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != 'SIUUU' or request.form['password'] != 'coding':
-            error = 'Invalid Credentials. Please try again.'
-        else:
-            return redirect(url_for('index'))
-    return render_template('login.html', error=error)
+
+@app.route('/')
+def index():
+    return render_template("index.html")
 
 #@app.errorhandler(404)
 #def page_not_found(e):
@@ -34,9 +26,16 @@ def login():
 #    return render_template('404.html'), 404
 
 @login_required
-@app.route('/level1')
-def level1():
-    return render_template("level1.html")
+@app.route('/level1', methods=['GET', 'POST'])
+def login():
+    #Error I guess
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'SIUUU' or request.form['password'] != 'coding':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return render_template("level1.html")
+    return render_template('login.html', error=error)
 
 
 @login_required
