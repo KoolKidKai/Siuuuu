@@ -9,13 +9,14 @@ from cruddy.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
-
-
 @app.route("/home")
 def index():
     return render_template("index.html")
 
 # Route for handling the login page logic
+
+
+@login_required
 @app.route('/', methods=['GET', 'POST'])
 def login():
     error = None
