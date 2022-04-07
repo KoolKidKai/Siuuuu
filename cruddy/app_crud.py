@@ -49,7 +49,8 @@ def crud_login():
 
 @app_crud.route('/logout/', methods=["GET", "POST"])
 def crud_logout():
-    return render_template("login.html")
+    logout_user()
+    return render_template("index.html")
 
 @app_crud.route('/authorize/', methods=["GET", "POST"])
 def crud_authorize():
@@ -136,3 +137,4 @@ def search_term():
     term = req['term']
     response = make_response(jsonify(users_ilike(term)), 200)
     return response
+
