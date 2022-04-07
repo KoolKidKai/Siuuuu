@@ -49,7 +49,8 @@ def crud_login():
 
 @app_crud.route('/logout/', methods=["GET", "POST"])
 def crud_logout():
-    return render_template("login.html")
+    logout_user()
+    return render_template("login2.html")
 
 @app_crud.route('/authorize/', methods=["GET", "POST"])
 def crud_authorize():
