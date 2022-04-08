@@ -30,6 +30,11 @@
             bottom: 250px;
             right:150px
         }
+        #form1 {
+            left: 200px;
+            bottom: 50px;
+            right: 200px;
+        }
     </style>
 </head>
 <h5>
@@ -39,6 +44,11 @@
     <label for="level1">Enter Code Here</label><br>
     <input type="text" id="level1" name="level1" required><br>
     <input type="button" value="Submit Answer" onclick="response()">
+</form>
+
+
+<form id="form1" method="POST" action={{url_for('login')}}>
+    <button class="button">Logout</button>
 </form>
 
 <script>
