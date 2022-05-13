@@ -39,6 +39,10 @@ def login():
 def level2():
     return render_template("level2.html")
 
+@app.route('/calendar')
+def calendar():
+    return render_template("calendar.html")
+
 @app.route('/clubRoster')
 def clubRoster():
     return render_template("clubRoster.html")

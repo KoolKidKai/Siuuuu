@@ -17,6 +17,7 @@ app_crud_api = Blueprint('crud_api', __name__,
 api = Api(app_crud_api)
 
 
+
 # Method #2 for CRUD
 @app_crud_api.route('/')
 def crud_api():
