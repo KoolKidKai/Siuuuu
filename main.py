@@ -28,6 +28,14 @@ def notes():
 def calendar():
     return render_template("calendar.html")
 
+@app.route('/clubRoster')
+def clubRoster():
+    return render_template("clubRoster.html")
+
+@app.route('/join')
+def join():
+    return render_template("join.html")
+
 
 
 if __name__ == "__main__":

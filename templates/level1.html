@@ -6,6 +6,13 @@
 {% set overview = "https://github.com/KoolKidKai/Siuuuu" %}
 <head>
     <style>
+        .logoutLblPos{
+
+            position:fixed;
+            right:10px;
+            top:5px;
+        }
+
         body {
             background-image: url("https://studentsoftheworld.info/sites/sport/img/21108_picture_cristiano_ronaldo_138.jpg");
             background-color: #cccccc;
@@ -63,3 +70,11 @@
         }
     }
 </script>
+
+<div style="float:right">
+    <form align="right" name="form1" method="post" action={{url_for('crud.crud_logout')}}>
+        <label class="logoutLblPos">
+            <input name="submit2" type="submit" id="submit2" value="Log Out">
+        </label>
+    </form>
+</div>
