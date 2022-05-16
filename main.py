@@ -47,6 +47,10 @@ def calendar():
 def clubRoster():
     return render_template("clubRoster.html")
 
+@app.route('/join')
+def join():
+    return render_template("join.html")
+
 
 
 if __name__ == "__main__":

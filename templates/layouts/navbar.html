@@ -84,12 +84,13 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            CRUD
+                            Membership
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href={{ url_for('crud.crud') }}>SQL CRUD</a></li>
-                            <li><a class="dropdown-item" href={{ url_for('crud_api.crud_api') }}>SQL CRUD Async</a></li>
-                            <li><a class="dropdown-item" href={{ url_for('crud.search') }}>SQL Search</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('clubRoster') }}>Leadership</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('crud_api.crud_api') }}>Full Roster</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('crud.search') }}>Member Search</a></li>
+                            <li><a class="dropdown-item" href={{ url_for('join') }}>How to Join</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -109,12 +110,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <div class="navbar-nav">
                 <!--root menu -->
                 <a class="nav-link" href="/viewpoints">View Points <span class="sr-only"></span></a>
-
-
-            </div>
-            <div class="navbar-nav">
-                <!--root menu -->
-                <a class="nav-link" href="/clubRoster">Club Roster <span class="sr-only"></span></a>
 
 
             </div>
