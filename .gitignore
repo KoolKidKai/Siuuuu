@@ -4,3 +4,4 @@ cruddy/__pycache__/app_crud.cpython-39.pyc
 *.pyc
 *.pyc
 *.xml
+venv/Scripts/python.exe

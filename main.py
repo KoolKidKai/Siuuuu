@@ -1,6 +1,5 @@
 from flask import render_template, redirect, url_for, request
 from __init__ import app
-from flask_login import login_required
 
 
 from cruddy.app_crud import app_crud
@@ -17,27 +16,13 @@ app.register_blueprint(app_crud_api)
 def index():
     return render_template("index.html")
 
+@app.route('/notes')
+def notes():
+    return render_template("notes.html")
 #@app.errorhandler(404)
 #def page_not_found(e):
 #    # note that we set the 404 status explicitly
 #    return render_template('404.html'), 404
-
-@login_required
-@app.route('/level1', methods=['GET', 'POST'])
-def login():
-    error = None
-    if request.method == 'POST':
-        if request.form['username'] != 'SIUUU' or request.form['password'] != 'coding':
-            error = 'Invalid Credentials. Please try again.'
-        else:
-            return render_template("level1.html")
-    return render_template('login.html', error=error)
-
-
-@login_required
-@app.route('/level2')
-def level2():
-    return render_template("level2.html")
 
 @app.route('/calendar')
 def calendar():
