@@ -1,13 +1,27 @@
-{% include "layouts/layout.html" %}
 <html>
 <head>
     <title>Login Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+
 </head>
 <body>
+<style>
+    body {
+        background-color: #d3ade6;
+    }
+
+    h1 {
+        color: #00000b;
+        text-align: center;
+    }
+
+    p {
+        font-family: verdana;
+        font-size: 20px;
+    }
+</style>
 <div class="container">
-    <h1>Please login</h1>
+    <h1>Please Login!</h1>
     <br>
     <form action="" method="post">
         <input type="text" placeholder="Username" name="username" value="{{

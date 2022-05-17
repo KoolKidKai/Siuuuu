@@ -12,9 +12,20 @@ app.register_blueprint(app_crud_api)
 
 
 
-@app.route('/')
-def index():
-    return render_template("index.html")
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'SIUUU' or request.form['password'] != 'coding':
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            return render_template('index.html')
+    return render_template('login.html', error=error)
+
+
+
+
+
 
 @app.route('/notes')
 def notes():
