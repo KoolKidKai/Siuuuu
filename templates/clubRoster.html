@@ -26,6 +26,8 @@
      /* Add some shadows to create a card effect */
      .card {
          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+         height: fit-content;
+         width: fit-content;
      }
 
      /* Some left and right padding inside the container */
@@ -58,6 +60,15 @@
 
      .button:hover {
          background-color: #555;
+
+     }
+
+     .title {
+         column-span: all;
+         align-content: center;
+         font-weight: bold;
+         color: black;
+         font-size: larger;
      }
  </style>
     <meta charset="UTF-8">
@@ -65,9 +76,10 @@
 </head>
 
 <html lang="en">
+
 <body>
 
-<h1>Hack Club Leadership</h1>
+<h1 style="text-align: center">Hack Club Leadership</h1>
 <div class="container">
     <div class="row">
         <div class="column">
@@ -103,7 +115,7 @@
                     <h2>Nathan Shih</h2>
                     <p class="title">Secretary</p>
                     <p>2022 founding member and current secretary of DNHS Hack Club</p>
-                    <p>example@example.com</p>
+                    <p>nathanshih04@gmail.com</p>
                     <p></p>
                 </div>
             </div>
