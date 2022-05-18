@@ -11,3 +11,5 @@ node_modules
 *.pyc
 *.xml
 *.pyc
+*.iml
+*.xml
