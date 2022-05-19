@@ -8,8 +8,9 @@ from cruddy.app_crud_api import app_crud_api
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
-# Route for handling the login page logic
 
+
+# Route for handling the login page logic
 
 
 @app.route('/', methods=['GET', 'POST'])
