@@ -143,12 +143,12 @@
 
         <div class="container">
             <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <input type="text" placeholder="Enter Username" name="uname" id="username1" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="psw" id="password1" required>
 
-            <button type="submit">Login</button>
+            <button type="submit" onclick="validate()">Login</button>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
@@ -166,6 +166,20 @@
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+    }
+    function validate()
+    {
+        if(   document.getElementById("username1").value == "workshop"
+            && document.getElementById("password1").value == "workshop" )
+        {
+            alert( "Successful Login!" );
+            location.href="index.html";
+        }
+        else
+        {
+            alert("Unsuccessful Login. Try again. ");
+            location.href="login.html";
         }
     }
 </script>
