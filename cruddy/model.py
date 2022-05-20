@@ -1,4 +1,4 @@
-""" database dependencies to support Users db examples """
+""" database dependencies to support Users db examples bazinga """
 from __init__ import db
 from sqlalchemy.exc import IntegrityError
 from flask_login import UserMixin
