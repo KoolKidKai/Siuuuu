@@ -2,18 +2,18 @@
 
 Main Goals Achieved (4/8):
 - [x] Fully Deploy
-- [O] Team Roster using database/CRUD
+- [ ] Team Roster using database/CRUD
 - [x] Formatted Search for club members
 - [x] calendar containing important dates/events
-- [o] Leadership page
+- [ ] Leadership page
 - [x] How to Join
-- [o] Authorization
-- [o] Meaningful capture (local browser based notes keeper)
+- [ ] Authorization
+- [ ] Meaningful capture (local browser based notes keeper)
 
 Extras (/):
 - In progress
 
-Video/Advertisement
+[Video/Advertisement]()
 
 # Self Grades #
 
