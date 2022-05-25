@@ -148,7 +148,7 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" id="password1" required>
 
-            <button type="submit" onclick="validate()">Login</button>
+            <button type="reset" onclick="validate()">Login</button>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
@@ -174,12 +174,12 @@
             && document.getElementById("password1").value == "coding" )
         {
             alert( "Successful Login!" );
-            location.href="index.html";
+            location.href="/home";
         }
         else
         {
             alert("Unsuccessful Login. Try again. ");
-            location.href="login.html";
+            location.href="/";
         }
     }
 </script>
