@@ -1,140 +1,480 @@
+
 {% include "layouts/layout.html" %}
-
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Calendar</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive Mono"> <!-- a monospace -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue"> <!-- https://fonts.google.com/specimen/Bebas+Neue?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret One"> <!-- https://fonts.google.com/specimen/Poiret+One?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton"> <!-- https://fonts.google.com/specimen/Monoton?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka the Great"> <!-- https://fonts.google.com/specimen/Fredericka+the+Great?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Forum"> <!--https://fonts.google.com/specimen/Forum?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        p {
+            font-family: Times;
+        }
+        label {
+            font-family: Times;
+        }
+        body {
+            background-color: antiquewhite;
+            color: black;
+        }
+
+        .dark-mode {
+            background-color: #35363a;
+            color: #b3b3b3;
+            border: 3px white;
+        }
+        button.task {
+            margin-top: 5px;
+            font-family: Times;
+            padding: 6px 14px;
+            border-radius: 6px;
+            color: #3D3D3D;
+            background: #fff;
+            border: 1px solid white;
+            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            transition-duration: 0.4s;
+        }
+        button {
+            margin-top: 5px;
+            font-family: Times;
+            padding: 6px 14px;
+            border-radius: 6px;
+            color: #3D3D3D;
+            background: #fff;
+            border: 1px solid black;
+            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            transition-duration: 0.4s;
+        }
+        button:hover {
+            background-color: floralwhite;
+            border: 1px solid black;
+        }
+        table {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: fit-content;
+            overflow-wrap: anywhere;
+            font-family: Times;
+            text-align: center;
+        }
+        .button1:hover {
+            box-shadow: inset 300px 0 0 0 #FFD580;
+            cursor: pointer;
+            color: sandybrown;
+        }
+        .button1:before {
+            transition: all ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: "";
+            background-color: sandybrown;
+        }
+
+        .button1:hover:before {
+            transition: .5s all ease;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            z-index: -1;
+
+        }
+        .button2:hover {
+            box-shadow: inset 300px 0 0 0 #ADD8E6;
+            cursor: pointer;
+            color: white;
+        }
+        .button2:before {
+            transition: all ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: "";
+            background-color: lightblue;
+        }
+
+        .button2:hover:before {
+            transition: .5s all ease;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            z-index: -1;
+
+        }
+        .button3:hover {
+            box-shadow: inset 300px 0 0 0 #CBC3E3;
+            cursor: pointer;
+            color: lightpink;
+        }
+        .button3:before {
+            transition: all ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: "";
+            background-color: lightpink;
+        }
+
+        .button3:hover:before {
+            transition: .5s all ease;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            z-index: -1;
+
+        }
+        .button4:hover {
+            box-shadow: inset 300px 0 0 0 #87CEEB;
+            cursor: pointer;
+            color: cornflowerblue;
+        }
+        .button4:before {
+            transition: all ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: "";
+            background-color: deepskyblue;
+        }
+
+        .button4:hover:before {
+            transition: .5s all ease;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            z-index: -1;
+
+        }
+        h1 {
+            font-family: Times;
+            font-size: 90px;
+        }
+        table {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            overflow-wrap: anywhere;
+            font-family: Times;
+            text-align: center;
+        }
+        th, td{
+            border: 3px solid black;
+            column-rule: 4px dotted rgb(79, 185, 227);
+            padding: 10px;
+        }
+
+        input.text {
+            font-family: Times;
+            border: 0;
+        }
+
+        input::placeholder {
+            color: gray;
+            padding-left: 10px;
+            font-size: small;
+            font-family: Times;
+        }
+        #top {
+            display: flex;
+            justify-content: space-between;
+        }
+        ul {
+            margin-left: -40px;
+            list-style-position: inside;
+        }
+        button.rainbow {
+            background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+            background-color:#191919;
+            border-radius:5px;
+        }
+        button.rainbow:hover {
+            animation:slidebg 10s linear infinite;
+        }
+        @keyframes slidebg {
+            to {
+                background-position:10vw;
+            }
+        }
+        button.dark {
+            background-color: #363d47;
+            color: #9daf9b;
+        }
+    </style>
+    <title>HackClub Events Planner</title>
 </head>
-<style>
-    ul {list-style-type: none;}
-    body {font-family: Verdana, sans-serif;}
 
-    /* Month header */
-    .month {
-        padding: 70px 25px;
-        width: 100%;
-        background: #1abc9c;
-        text-align: center;
-    }
 
-    /* Month list */
-    .month ul {
-        margin: 0;
-        padding: 0;
-    }
+<div style="margin-left: 50px; margin-right: 50px">
+    <!-- Clock display -->
+    <div id="top" style="text-align: right" >
+        <h1> HackClub PLANNER</h1>
+    </div>
 
-    .month ul li {
-        color: white;
-        font-size: 20px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-    }
+    <p>This is where you can see HackClub Events as well as add to them!</p>
 
-    /* Previous button inside month header */
-    .month .prev {
-        float: left;
-        padding-top: 10px;
-    }
+    <!-- button that leads to the repo, can style the button in css above -->
+    <div id="top" style="text-align: right" >
+        <div>
+            <button class="dark" onclick="darkMode()">Dark Mode</button>
+            <button onclick="returnColor()"> Light Mode</button>
+        </div>
+    </div>
 
-    /* Next button */
-    .month .next {
-        float: right;
-        padding-top: 10px;
-    }
+    <div class="row" style="align-content: center; margin-left: 63%; margin-right: 30%">
 
-    /* Weekdays (Mon-Sun) */
-    .weekdays {
-        margin: 0;
-        padding: 10px 0;
-        background-color:#ddd;
-    }
+        <button onclick="button_left()">Last Month</button>
 
-    .weekdays li {
-        display: inline-block;
-        width: 13.6%;
-        color: #666;
-        text-align: center;
-    }
+        <div id="month" style="text-align: center">May</div>
 
-    /* Days (1-31) */
-    .days {
-        padding: 10px 0;
-        background: #eee;
-        margin: 0;
-    }
+        <div id="year" style="text-align: center"> 2022</div>
 
-    .days li {
-        list-style-type: none;
-        display: inline-block;
-        width: 13.6%;
-        text-align: center;
-        margin-bottom: 5px;
-        font-size:12px;
-        color: #777;
-    }
+        <button onclick="button_right()"> Next Month </button>
 
-    /* Highlight the "current" day */
-    .days li .active {
-        padding: 5px;
-        background: #1abc9c;
-        color: white !important
-    }
-</style>
+    </div>
 
-<body>
 
-<div class="month">
-    <ul>
-        <li class="prev">&#10094;</li>
-        <li class="next">&#10095;</li>
-        <li>August<br><span style="font-size:18px">2021</span></li>
-    </ul>
+
+    <table>
+
+
+        <tr>    <!-- tr is the table row and center aligns them  -->
+            <th>Sunday</th>      <!-- The days and aligning in the center th is the table header  -->
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+
+        {% for j in range(0,5) %}
+            <tr>
+
+                {% if j < 4 %}
+                    {% for i in range(1,8) %} <!-- Code for iteration, table, button: Cell for each day of the month -->
+                        <td>
+                        <p style="text-align: left"> {{j*7+i}} </p>
+                        <ul id="show_input.{{j}}{{i}}"></ul>
+                        <input placeholder="Event" class="text" id="task.{{j}}{{i}}" type="text">
+                        <button class="task" id="add_task.{{j}}{{i}}" onclick="display('{{j}}{{i}}')">Add Info</button>
+                        <br>
+                        <button class="task" onclick="remove('{{j}}{{i}}')">Clear Task(s)</button>
+                    {% endfor %}
+                {% endif %}
+
+                {% if j == 4 %} <!-- jinja if statement; prints certain number of cells depending on which row -->
+                    {% for i in range(1,3) %} <!-- Code for iteration, table, button: Cell for each day of the month -->
+                        <td>
+                        <p style="text-align: left"> {{j*7+i}} </p>
+                        <p id="show_input{{j}}{{i}}"></p>
+                        <input placeholder="Event" class="text" id="task{{j}}{{i}}" type="text">
+                        <button class="task" id="add_task.{{j}}{{i}}" class="task" onclick="display('{{j}}{{i}}')">Add Task</button>
+                        <br>
+                        <button class="task" onclick="remove('{{j}}{{i}}')">Clear</button>
+                    {% endfor %}
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+
+    <script>
+
+
+        function display(id) {
+            let task = "task." + id;
+            const show_input = "show_input." + id;
+            localStorage.setItem(task, document.getElementById(task).value); // stores value in session
+            const TASK = localStorage.getItem(task); // a new variable for the list
+            const list = document.createElement('list');
+            list.innerHTML = "<li>" + TASK + "</li>"; // list
+            document.getElementById(show_input).appendChild(list); // adding to list
+            localStorage.setItem(show_input, document.getElementById(show_input).innerHTML)
+            document.getElementById(task).value = null; // clears input box, QOL update
+        }
+
+        for (let j = 0; j < 5; j++) {
+            for (let i = 1; i < 8; i++) {
+                let task = "task." + j;
+                task = task + i;
+                let button = "add_task." + j;
+                button = button + i;
+                document.getElementById(task)
+                    .addEventListener("keyup", function (event) {
+                        event.preventDefault();
+                        if (event.keyCode === 13) { // maybe it's deprecated, but it works
+                            document.getElementById(button).click(); // button runs the display() code
+                        }
+                    });
+            }
+        }
+
+        function keep() {
+            for (let j = 0; j < 5; j++) {
+                for (let i = 1; i < 8; i++) {
+                    task = "task." + j;
+                    task = task + i;
+                    show_input = "show_input." + j;
+                    show_input = show_input + i;
+                    if (typeof localStorage.getItem(task) != null) {
+                        document.getElementById(show_input).innerHTML = localStorage.getItem(show_input);
+                    }
+                }
+            }
+        }
+
+        function reply_click(clicked_id)
+        {
+            alert(clicked_id);
+        }
+
+        function myFunction() {    //Code for logic gate
+            const x = document.getElementById("firstcondition")
+            const y = document.getElementById("secondcondition")
+
+            if (x.checked || y.checked) {   //or
+                document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/vomilton.png\" alt=\"Eh...\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+            }
+            if (x.checked && y.checked) {   //and
+                document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/ankles.png\" alt=\"Sheeeeeesh\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+            }
+            if (!(x.checked || y.checked)) {    //nor
+                document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/anirudhsus.png\" alt=\"Sadge\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+
+            }
+        }
+
+        function changeImage(ndx) {     <!-- if else statement using the function changeImage   -->
+            if (document.getElementById("img" + ndx).src == document.getElementById('img_orig' + ndx).innerHTML) { <!-- if original switch to gray   -->
+                document.getElementById('img' + ndx).src = document.getElementById('img_gray' + ndx).innerHTML;
+            } else {
+                document.getElementById('img' + ndx).src = document.getElementById('img_orig' + ndx).innerHTML;  <!-- if gray switch to original   -->
+            }
+        }
+
+        function changeColor(color) {
+            document.body.style.background = color;
+        }
+        function RANDOMCOLOR() {
+            let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            changeColor(color);
+        }
+
+        function remove(id) {
+            const task = "task." + id;
+            const show_input = "show_input." + id;
+            // clearing web storage
+            localStorage.removeItem(task);
+            localStorage.removeItem(show_input);
+            // clearing cell text
+            document.getElementById(show_input).innerHTML = null;
+        }
+
+        function returnColor() {
+            document.body.style.background = "#FAEBD7";
+            document.body.style.color = 'black';
+        }
+        function darkMode() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }
+
+        let n = 0
+        let year = 2022
+
+
+
+        function button_right() {
+            n = n + 1
+            if (
+                n > 11
+            ) year_changer()
+            month_changer(n)
+            alert("works")
+        }
+
+        function button_left() {
+            n = n - 1
+            if (
+                n < 0
+            ) year_changer()
+            month_changer(n)
+        }
+
+        function month_changer(num) {
+            if (
+                num === 0
+            ) document.getElementById("month").innerHTML = "January"
+            else if (
+                num === 1
+            ) document.getElementById("month").innerHTML = "February"
+            if (
+                num === 2
+            ) document.getElementById("month").innerHTML = "March"
+            if (
+                num === 3
+            ) document.getElementById("month").innerHTML = "April"
+            if (
+                num === 4
+            ) document.getElementById("month").innerHTML = "May"
+            if (
+                num === 5
+            ) document.getElementById("month").innerHTML = "June"
+            if (
+                num === 6
+            ) document.getElementById("month").innerHTML = "July"
+            if (
+                num === 7
+            ) document.getElementById("month").innerHTML = "August"
+            if (
+                num === 8
+            ) document.getElementById("month").innerHTML = "September"
+            if (
+                num === 9
+            ) document.getElementById("month").innerHTML = "October"
+            if (
+                num === 10
+            ) document.getElementById("month").innerHTML = "November"
+            if (
+                num === 11
+            ) document.getElementById("month").innerHTML = "December"
+
+        }
+        function year_changer() {
+            if (n > 11) {
+                year += 1; n = 0
+            }
+            else if (n < 1) {
+                year -= 1; n = 11
+            }
+            document.getElementById("year").innerHTML = year.toString()
+        }
+    </script>
 </div>
-
-<ul class="weekdays">
-    <li>Mo</li>
-    <li>Tu</li>
-    <li>We</li>
-    <li>Th</li>
-    <li>Fr</li>
-    <li>Sa</li>
-    <li>Su</li>
-</ul>
-
-<ul class="days">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li><span class="active">10</span></li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
-
-</ul>
-
-</body>
-</html>

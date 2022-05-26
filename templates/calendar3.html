@@ -235,26 +235,26 @@
 <div style="margin-left: 50px; margin-right: 50px">
     <!-- Clock display -->
     <div id="top" style="text-align: right" >
-        <h1>PLANNER</h1>
+        <h1> HackClub PLANNER</h1>
     </div>
 
-    <p>This will be where we will build the month version - <b>Put your main events, deadlines, and important events here.</b></p>
+    <p>This is where you can see HackClub Events as well as add to them!</p>
 
     <!-- button that leads to the repo, can style the button in css above -->
     <div id="top" style="text-align: right" >
         <div>
-            <button class="dark" onclick="darkMode()">DARK MODE</button>
-            <button onclick="returnColor()">Reset Color</button>
+            <button class="dark" onclick="darkMode()">Dark Mode</button>
+            <button onclick="returnColor()"> Light Mode</button>
         </div>
     </div>
 
-    <div class="row" style="align-content: center; margin-left: 43%; margin-right: 38%">
+    <div class="row" style="align-content: center; margin-left: 63%; margin-right: 30%">
 
         <button onclick="button_left()">Last Month</button>
 
         <div id="month" style="text-align: center">May</div>
-        <div id="year" style="text-align: center"> 2022</div>
 
+        <div id="year" style="text-align: center"> 2022</div>
 
         <button onclick="button_right()"> Next Month </button>
 
@@ -417,6 +417,7 @@
                 n > 11
             ) year_changer()
             month_changer(n)
+            alert("works")
         }
 
         function button_left() {
