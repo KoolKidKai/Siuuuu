@@ -42,6 +42,14 @@ def notes():
 def calendar2():
     return render_template("calendar2.html")
 
+@app.route('/calendar3')
+def calendar3():
+    return render_template("calendar3.html")
+
+@app.route('/calendar')
+def calendar():
+    return render_template("calendar.html")
+
 @app.route('/clubRoster')
 def clubRoster():
     return render_template("clubRoster.html")

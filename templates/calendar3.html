@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include "navbar.html" %}
 
-<!-- THE MAIN PROJECT -->
-{% set basename = "Nighthawk Coding" %}
+{% include "layouts/layout.html" %}
+<html lang="en">
 
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -21,10 +18,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
         p {
-            font-family: Raleway;
+            font-family: Times;
         }
         label {
-            font-family: Raleway;
+            font-family: Times;
         }
         body {
             background-color: antiquewhite;
@@ -38,7 +35,7 @@
         }
         button.task {
             margin-top: 5px;
-            font-family: Raleway;
+            font-family: Times;
             padding: 6px 14px;
             border-radius: 6px;
             color: #3D3D3D;
@@ -52,7 +49,7 @@
         }
         button {
             margin-top: 5px;
-            font-family: Raleway;
+            font-family: Times;
             padding: 6px 14px;
             border-radius: 6px;
             color: #3D3D3D;
@@ -73,7 +70,7 @@
             margin-bottom: 20px;
             width: fit-content;
             overflow-wrap: anywhere;
-            font-family: Raleway;
+            font-family: Times;
             text-align: center;
         }
         .button1:hover {
@@ -177,7 +174,7 @@
 
         }
         h1 {
-            font-family: Forum;
+            font-family: Times;
             font-size: 90px;
         }
         table {
@@ -185,7 +182,7 @@
             margin-bottom: 20px;
             width: 100%;
             overflow-wrap: anywhere;
-            font-family: Raleway;
+            font-family: Times;
             text-align: center;
         }
         th, td{
@@ -195,7 +192,7 @@
         }
 
         input.text {
-            font-family: Raleway;
+            font-family: Times;
             border: 0;
         }
 
@@ -203,7 +200,7 @@
             color: gray;
             padding-left: 10px;
             font-size: small;
-            font-family: Raleway;
+            font-family: Times;
         }
         #top {
             display: flex;
@@ -231,7 +228,7 @@
             color: #9daf9b;
         }
     </style>
-    <title>Nighthawk Coding | Planner</title>
+    <title>HackClub Events Planner</title>
 </head>
 
 
@@ -246,31 +243,36 @@
     <!-- button that leads to the repo, can style the button in css above -->
     <div id="top" style="text-align: right" >
         <div>
-            <button class="rainbow" onclick = "RANDOMCOLOR()">RANDOM</button>
             <button class="dark" onclick="darkMode()">DARK MODE</button>
-            <button class="button1" style="background-color: sandybrown; color: orangered " onclick = "AUTUMN()">AUTUMN</button>
-            <button class="button2" style="background-color: ghostwhite; color: dodgerblue" onclick = "WINTER()">WINTER</button>
-            <button class="button3" style="background-color: mediumspringgreen; color:navy" onclick = "SPRING()">SPRING</button>
-            <button class="button4" style="background-color:dodgerblue ; color: yellow" onclick = "SUMMER()">SUMMER</button>
-            <button onclick = "returnColor()">RETURN</button>
+            <button onclick="returnColor()">Reset Color</button>
         </div>
     </div>
+
+    <div class="row" style="align-content: center; margin-left: 43%; margin-right: 38%">
+
+        <button onclick="button_left()">Last Month</button>
+
+        <div id="month" style="text-align: center">May</div>
+        <div id="year" style="text-align: center"> 2022</div>
+
+
+        <button onclick="button_right()"> Next Month </button>
+
+    </div>
+
 
 
     <table>
 
-        <tr>
-            <th colspan="7">May 2022</th>    <!-- html  -->
-        </tr>
 
         <tr>    <!-- tr is the table row and center aligns them  -->
-            <th>Sun</th>      <!-- The days and aligning in the center th is the table header  -->
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
+            <th>Sunday</th>      <!-- The days and aligning in the center th is the table header  -->
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
         </tr>
 
         {% for j in range(0,5) %}
@@ -284,11 +286,6 @@
                         <input placeholder="Event" class="text" id="task.{{j}}{{i}}" type="text">
                         <button class="task" id="add_task.{{j}}{{i}}" onclick="display('{{j}}{{i}}')">Add Info</button>
                         <br>
-                        <!--                <p style="text-align: left"> {{j*7+i}} </p>-->
-                        <!--                <p id="show_input{{j}}{{i}}"></p>-->
-                        <!--                <input placeholder="Event" class="text" id="task{{j}}{{i}}" type="text">-->
-                        <!--                <button id="add_task.{{j}}{{i}}" class="task" id="add-task('{{j}}{{i}}')" onclick="display('{{j}}{{i}}')">Add Info</button>-->
-                        <!--                <br>-->
                         <button class="task" onclick="remove('{{j}}{{i}}')">Clear Task(s)</button>
                     {% endfor %}
                 {% endif %}
@@ -299,33 +296,14 @@
                         <p style="text-align: left"> {{j*7+i}} </p>
                         <p id="show_input{{j}}{{i}}"></p>
                         <input placeholder="Event" class="text" id="task{{j}}{{i}}" type="text">
-                        <button class="task" id="add_task.{{j}}{{i}}" class="task" onclick="display('{{j}}{{i}}')">Add Info</button>
+                        <button class="task" id="add_task.{{j}}{{i}}" class="task" onclick="display('{{j}}{{i}}')">Add Task</button>
                         <br>
-                        <button class="task" onclick="remove('{{j}}{{i}}')">Clear Task(s)</button>
+                        <button class="task" onclick="remove('{{j}}{{i}}')">Clear</button>
                     {% endfor %}
                 {% endif %}
             </tr>
         {% endfor %}
     </table>
-
-    <!--{#    <table style="width: fit-content">#}-->
-    <!--{#        <tr>#}-->
-    <!--{#            <td>#}-->
-    <!--{#                <input type="checkbox" name="A" class="checkbox" id="firstcondition" value="1">#}-->
-    <!--{#                <label for="firstcondition">Are You Satisfied with the Progress?</label>#}-->
-    <!--{#            </td>#}-->
-    <!--{##}-->
-    <!--{#            <td>#}-->
-    <!--{#                <input type="checkbox" name="B" class="checkbox" id="secondcondition" value="1">#}-->
-    <!--{#                <label for="secondcondition">Are You Satisfied with the Grades?</label>#}-->
-    <!--{#            </td>#}-->
-    <!--{#            <td> <button class="task" onclick="myFunction()">Done</button>#}-->
-    <!--{#            <td><span id="onlyrow"></span></td>#}-->
-    <!--{#        </tr>#}-->
-    <!--{#    </table>#}-->
-    <!--    <p id = "GOTOSTUDY" style ="font-size: 16px; font-weight: bold;">-->
-    <!--    </p>-->
-
 
     <script>
 
@@ -419,18 +397,6 @@
             document.getElementById(show_input).innerHTML = null;
         }
 
-        function AUTUMN() {
-            changeColor('sandybrown');
-        }
-        function WINTER() {
-            changeColor('lightblue');
-        }
-        function SPRING() {
-            changeColor('lightpink');
-        }
-        function SUMMER() {
-            changeColor('deepskyblue');
-        }
         function returnColor() {
             document.body.style.background = "#FAEBD7";
             document.body.style.color = 'black';
@@ -439,6 +405,75 @@
             document.body.style.color = "#b3b3b3";
             document.body.style.background = "#35363a";
         }
+
+        let n = 0
+        let year = 2022
+
+
+
+        function button_right() {
+            n = n + 1
+            if (
+                n > 11
+            ) year_changer()
+            month_changer(n)
+        }
+
+        function button_left() {
+            n = n - 1
+            if (
+                n < 0
+            ) year_changer()
+            month_changer(n)
+        }
+
+        function month_changer(num) {
+            if (
+                num === 0
+            ) document.getElementById("month").innerHTML = "January"
+            else if (
+                num === 1
+            ) document.getElementById("month").innerHTML = "February"
+            if (
+                num === 2
+            ) document.getElementById("month").innerHTML = "March"
+            if (
+                num === 3
+            ) document.getElementById("month").innerHTML = "April"
+            if (
+                num === 4
+            ) document.getElementById("month").innerHTML = "May"
+            if (
+                num === 5
+            ) document.getElementById("month").innerHTML = "June"
+            if (
+                num === 6
+            ) document.getElementById("month").innerHTML = "July"
+            if (
+                num === 7
+            ) document.getElementById("month").innerHTML = "August"
+            if (
+                num === 8
+            ) document.getElementById("month").innerHTML = "September"
+            if (
+                num === 9
+            ) document.getElementById("month").innerHTML = "October"
+            if (
+                num === 10
+            ) document.getElementById("month").innerHTML = "November"
+            if (
+                num === 11
+            ) document.getElementById("month").innerHTML = "December"
+
+        }
+        function year_changer() {
+            if (n > 11) {
+                year += 1; n = 0
+            }
+            else if (n < 1) {
+                year -= 1; n = 11
+            }
+            document.getElementById("year").innerHTML = year.toString()
+        }
     </script>
 </div>
-
