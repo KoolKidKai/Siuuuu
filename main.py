@@ -50,6 +50,10 @@ def calendar3():
 def calendar():
     return render_template("calendar.html")
 
+@app.route('/calendar4')
+def calendar4():
+    return render_template("calendar4.html")
+
 @app.route('/clubRoster')
 def clubRoster():
     return render_template("clubRoster.html")
