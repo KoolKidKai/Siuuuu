@@ -56,6 +56,8 @@ class Notes(db.Model):
 # -- a.) db.Model is like an inner layer of the onion in ORM
 # -- b.) Users represents data we want to store, something that is built on db.Model
 # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
+
+
 class Users(UserMixin, db.Model):
     # define the Users schema
     userID = db.Column(db.Integer, primary_key=True)
@@ -69,6 +71,7 @@ class Users(UserMixin, db.Model):
         self.name = name
         self.email = email
         self.password = password
+
 
     # CRUD create/add a new record to the table
     # returns self or None on error

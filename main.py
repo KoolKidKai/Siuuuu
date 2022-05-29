@@ -49,8 +49,8 @@ def index():
 
 
 
-@app.route('/notes')
-def notes():
+@app.route('/hackclub_notes')
+def none():
     return render_template("notes.html")
 #@app.errorhandler(404)
 #def page_not_found(e):
