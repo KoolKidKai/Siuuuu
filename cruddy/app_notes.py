@@ -7,7 +7,7 @@ from cruddy.model import Notes
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_notes = Blueprint('notes', __name__,
                       url_prefix='/notes',
-                      template_folder='/cruddy/notes',
+                      template_folder='/cruddy',
                       static_folder='static',
                       static_url_path='static')
 
