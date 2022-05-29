@@ -5,10 +5,12 @@ from flask_login import login_required
 from cruddy.app_crud import app_crud
 from cruddy.app_crud_api import app_crud_api
 from cruddy.app_notes import app_notes
+from cruddy.app_uploady import app_upload
 
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_notes)
+app.register_blueprint(app_upload)
 
 @login_manager.unauthorized_handler
 def unauthorized():
@@ -27,6 +29,18 @@ def login():
         else:
             return render_template('index.html')
     return render_template('login.html', error=error)
+
+
+@app.route('/uploads/<name>')
+def uploads_endpoint(name):
+    return send_from_directory('/uploads', name)
+
+
+# register "uploads_endpoint" endpoint so url_for will find all uploaded files
+app.add_url_rule(
+    "/uploads" + "/<name>", endpoint="uploads_endpoint", build_only=True
+)
+
 
 @app.route('/home', methods=['GET', 'POST'])
 def index():
