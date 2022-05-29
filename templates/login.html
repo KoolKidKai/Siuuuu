@@ -204,7 +204,7 @@
     {
         newPassword=Request["newPassword"]
         confirmPassword=Request["confirmPassword"];
-        if IsPost
+        if(IsPost)
         {
             returnValue=ResetPassword(newPassword);
         }
