@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <style>
         body {font-family: Arial, Helvetica, sans-serif;}
         body {
@@ -148,13 +150,29 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" id="password1" required>
 
-            <button type="submit" onclick="validate()">Login</button>
+            <button type="reset" onclick="validate()">Login</button>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
+
+        <form method="post" action="">
+
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" title="New password" />
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" title="Confirm new password" />
+
+
+
+            <p class="form-actions">
+                <input type="submit" value="Change Password" title="Change password" />
+            </p>
+
+        </form>
     </form>
 </div>
 
@@ -174,12 +192,21 @@
             && document.getElementById("password1").value == "coding" )
         {
             alert( "Successful Login!" );
-            location.href="index.html";
+            location.href="/home";
         }
         else
         {
             alert("Unsuccessful Login. Try again. ");
-            location.href="login.html";
+            location.href="/";
+        }
+    }
+
+    {
+        newPassword=Request["newPassword"]
+        confirmPassword=Request["confirmPassword"];
+        if IsPost
+        {
+            returnValue=ResetPassword(newPassword);
         }
     }
 </script>

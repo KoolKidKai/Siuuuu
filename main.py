@@ -38,9 +38,9 @@ def notes():
 #    # note that we set the 404 status explicitly
 #    return render_template('404.html'), 404
 
-@app.route('/calendar')
-def calendar():
-    return render_template("calendar.html")
+@app.route('/calendar2')
+def calendar2():
+    return render_template("calendar2.html")
 
 @app.route('/clubRoster')
 def clubRoster():
