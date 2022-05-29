@@ -49,7 +49,7 @@ def index():
 
 
 
-@app.route('/hackclub_notes')
+@app.route('/hackclub_notes_upload')
 def none():
     return render_template("notes.html")
 #@app.errorhandler(404)
