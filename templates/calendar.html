@@ -42,7 +42,7 @@
     <h2 style="align-content: center"> Calendar for 2022-2023 </h2>
     <p1>Month<p1> <input id="monthInput" type="number" value="6" min="1" max="12" placeholder="Month">
 
-    <p1>Year<p1> <input id="yearInput" type="number" value="2022" min="2022" max="2023" placeholder="Year">
+    <p1>Year<p1> <input id="yearInput" type="number" value="2022" max="2023" placeholder="Year">
 </div>
 <div id="eventContent"></div>
 
@@ -102,8 +102,8 @@
             date1.getDate() == date2.getDate())
             ? true : false;
     };
-    const events = { 1 : {content: "Concert", year: 2019, month: 1, day: 24},
-        2 : {content: "Theatre", year: 2019, month: 1, day: 18}
+    const events = { 1 : {content: "Summer", year: 2022, month: 6, day: 30},
+        2 : {content: "Coding", year: 2022, month: 7, day: 14}
     };
     const getDatesArray = () => { return [
         [[], [], [], [], [], [], []],
@@ -182,6 +182,9 @@
 
                 let clickedDate = new Date(yearNum, monthIndex, day);
 
+                alert("New event on " + yearNum + " - " + monthIndex + " - " + day);
+
+
                 for (let i = 1; i <= Object.keys(events).length; i++) {
                     let eventDate = new Date(events[i].year, (events[i].month - 1), events[i].day);
 
@@ -190,7 +193,6 @@
             })
         }
     }
-
 </script>
 </body>
 </html>
