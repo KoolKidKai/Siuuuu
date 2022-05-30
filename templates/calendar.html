@@ -1,586 +1,197 @@
-
+{% include "layouts/layout.html" %}
 
 <style>
-    .event-color-c {
-        display: flex;
-        margin: 16px;
-        align-items: center;
+
+    table {
+        style: center;
+        border: 10px solid #760ce7;
+        height: 25rem;
+        width: 50rem;
+    }
+
+    td {
+        style: center;
+        border: 5px solid black;
+        height: 3rem;
+        width: 3rem;
+        text-align: center;
+    }
+
+    td:hover {
         cursor: pointer;
+        background-color: #42e2f4;
     }
 
-    .event-color-label {
-        flex: 1 0 auto;
-    }
-
-    .event-color {
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        margin-right: 10px;
-        margin-left: 240px;
-        background: #5ac8fa;
-    }
-
-    .crud-color-row {
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-    }
-
-    .crud-color-c {
-        padding: 3px;
-        margin: 2px;
-    }
-
-    .crud-color {
-        position: relative;
-        min-width: 46px;
-        min-height: 46px;
-        margin: 2px;
-        cursor: pointer;
-        border-radius: 23px;
-        background: #5ac8fa;
-    }
-
-    .crud-color-c.selected,
-    .crud-color-c:hover {
-        box-shadow: inset 0 0 0 3px #007bff;
-        border-radius: 48px;
-    }
-
-    .crud-color:before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -10px;
-        margin-left: -10px;
-        color: #f7f7f7;
-        font-size: 20px;
-        text-shadow: 0 0 3px #000;
-        display: none;
-    }
-
-    .crud-color-c.selected .crud-color:before {
-        display: block;
+    .active {
+        background-color: #8cf442;
     }
 </style>
 
-<body>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hack Club Calendar</title>
+</head>
+<body style="background-color: powderblue" >
 
-<div id="demo-add-delete-event"></div>
+<h1 style="align-content: center">
+    See upcoming events for Hack Club!
+</h1>
 
-<div id="demo-add-popup">
-    <div class="mbsc-form-group">
-        <label>
-            Title
-            <input mbsc-input id="event-title">
-        </label>
-        <label>
-            Description
-            <textarea mbsc-textarea id="event-desc"></textarea>
-        </label>
-    </div>
-    <div class="mbsc-form-group">
-        <label>
-            All-day
-            <input mbsc-switch id="event-all-day" type="checkbox" />
-        </label>
-        <label>
-            Starts
-            <input mbsc-input id="start-input" />
-        </label>
-        <label>
-            Ends
-            <input mbsc-input id="end-input" />
-        </label>
-        <div id="event-date"></div>
-        <div id="event-color-picker" class="event-color-c">
-            <div class="event-color-label">Color</div>
-            <div id="event-color-cont">
-                <div id="event-color" class="event-color"></div>
-            </div>
-        </div>
-        <label>
-            Show as busy
-            <input id="event-status-busy" mbsc-segmented type="radio" name="event-status" value="busy">
-        </label>
-        <label>
-            Show as free
-            <input id="event-status-free" mbsc-segmented type="radio" name="event-status" value="free">
-        </label>
-        <div class="mbsc-button-group">
-            <button class="mbsc-button-block" id="event-delete" mbsc-button data-color="danger" data-variant="outline">Delete event</button>
-        </div>
-    </div>
+<div>
+    <h2 style="align-content: center"> Calendar for 2022-2023 </h2>
+    <p1>Month<p1> <input id="monthInput" type="number" value="6" min="1" max="12" placeholder="Month">
+
+    <p1>Year<p1> <input id="yearInput" type="number" value="2022" min="2022" max="2023" placeholder="Year">
 </div>
+<div id="eventContent"></div>
 
-<div id="demo-event-color">
-    <div class="crud-color-row">
-        <div class="crud-color-c" data-value="#ffeb3c">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#ffeb3c"></div>
-        </div>
-        <div class="crud-color-c" data-value="#ff9900">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#ff9900"></div>
-        </div>
-        <div class="crud-color-c" data-value="#f44437">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#f44437"></div>
-        </div>
-        <div class="crud-color-c" data-value="#ea1e63">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#ea1e63"></div>
-        </div>
-        <div class="crud-color-c" data-value="#9c26b0">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#9c26b0"></div>
-        </div>
-    </div>
-    <div class="crud-color-row">
-        <div class="crud-color-c" data-value="#3f51b5">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#3f51b5"></div>
-        </div>
-        <div class="crud-color-c" data-value="">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check"></div>
-        </div>
-        <div class="crud-color-c" data-value="#009788">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#009788"></div>
-        </div>
-        <div class="crud-color-c" data-value="#4baf4f">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#4baf4f"></div>
-        </div>
-        <div class="crud-color-c" data-value="#7e5d4e">
-            <div class="crud-color mbsc-icon mbsc-font-icon mbsc-icon-material-check" style="background:#7e5d4e"></div>
-        </div>
-    </div>
-</div>
-
-</body>
+<table id="Table" style="align-content: center">
+    <tr>
+        <td class="cell">Sun</td>
+        <td class="cell">Mon</td>
+        <td class="cell">Tue</td>
+        <td class="cell">Wed</td>
+        <td class="cell">Thu</td>
+        <td class="cell">Fri</td>
+        <td class="cell">Sat</td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+</table>
 
 <script>
 
-mobiscroll.setOptions({
-theme: 'ios',
-themeVariant: 'light'
-});
+    let yearNum = new Date().getFullYear();
+    let monthIndex = new Date().getMonth() - 1;
+    // DOM and App variables
+    const inputMonth = document.getElementById("monthInput");
+    const inputYear = document.getElementById("yearInput");
+    const table = document.getElementById('Table');
+    const eventContent = document.getElementById('eventContent');
+    const tableRows = table.children[0].children;
+    const range1 = Array.from({length: 6}, (v, i) => i);
+    const range2 = Array.from({length: 7}, (v, i) => i);
+    const equals = (date1, date2) => {
+        return (date1.getFullYear() == date2.getFullYear() &&
+            date1.getMonth() == date2.getMonth() &&
+            date1.getDate() == date2.getDate())
+            ? true : false;
+    };
+    const events = { 1 : {content: "Concert", year: 2019, month: 1, day: 24},
+        2 : {content: "Theatre", year: 2019, month: 1, day: 18}
+    };
+    const getDatesArray = () => { return [
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []]
+    ];
+    };
+    const generatorDatesArray = (monthNum, monthIndex, yearNum, datesArray) => {
+        let daysCount = new Date(yearNum, monthNum, 0).getDate();
+        let yIndex = 0;
+        let range = Array.from({length: daysCount}, (v, i) => (i+1));
 
-var oldEvent,
-tempEvent = {},
-deleteEvent,
-restoreEvent,
-colorPicker,
-tempColor,
-titleInput = document.getElementById('event-title'),
-descriptionTextarea = document.getElementById('event-desc'),
-allDaySwitch = document.getElementById('event-all-day'),
-freeSegmented = document.getElementById('event-status-free'),
-busySegmented = document.getElementById('event-status-busy'),
-deleteButton = document.getElementById('event-delete'),
-colorSelect = document.getElementById('event-color-picker'),
-pickedColor = document.getElementById('event-color'),
-colorElms = document.querySelectorAll('.crud-color-c'),
-datePickerResponsive = {
-medium: {
-controls: ['calendar'],
-touchUi: false
-}
-},
-datetimePickerResponsive = {
-medium: {
-controls: ['calendar', 'time'],
-touchUi: false
-}
-},
-myData = [{
-id: 1,
-start: '2022-05-08T13:00',
-end: '2022-05-08T13:45',
-title: 'Lunch @ Butcher\'s',
-description: '',
-allDay: false,
-free: true,
-color: '#009788'
-}, {
-id: 2,
-start: '2022-05-30T15:00',
-end: '2022-05-30T16:00',
-title: 'General orientation',
-description: '',
-allDay: false,
-free: false,
-color: '#ff9900'
-}, {
-id: 3,
-start: '2022-05-29T18:00',
-end: '2022-05-29T22:00',
-title: 'Dexter BD',
-description: '',
-allDay: false,
-free: true,
-color: '#3f51b5'
-}, {
-id: 4,
-start: '2022-05-31T10:30',
-end: '2022-05-31T11:30',
-title: 'Stakeholder mtg.',
-description: '',
-allDay: false,
-free: false,
-color: '#f44437'
-}];
+        for (let i of range) {
+            let switchDate = new Date(yearNum, monthIndex, i).getDay();
 
-function createAddPopup(elm) {
-// hide delete button inside add popup
-deleteButton.style.display = 'none';
+            const funSwitch = (switchDate) => ({
+                0: new Function('yIndex', 'datesArray', 'i', "datesArray[0] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                1: new Function('yIndex', 'datesArray', 'i', "datesArray[1] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                2: new Function('yIndex', 'datesArray', 'i', "datesArray[2] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                3: new Function('yIndex', 'datesArray', 'i', "datesArray[3] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                4: new Function('yIndex', 'datesArray', 'i', "datesArray[4] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                5: new Function('yIndex', 'datesArray', 'i', "datesArray[5] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                6: new Function('yIndex', 'datesArray', 'i', "datesArray[6] = new Date(yearNum, monthIndex, i).getDate(); yIndex++; return yIndex;")
+            })[switchDate];
 
-deleteEvent = true;
-restoreEvent = false;
+            yIndex = funSwitch(switchDate)(yIndex, datesArray[yIndex], i);
+        }
 
-// set popup header text and buttons for adding
-popup.setOptions({
-headerText: 'New event',
-buttons: ['cancel', {
-text: 'Add',
-keyCode: 'enter',
-handler: function () {
-calendar.updateEvent({
-id: tempEvent.id,
-title: tempEvent.title,
-description: tempEvent.description,
-allDay: tempEvent.allDay,
-start: tempEvent.start,
-end: tempEvent.end,
-color: tempEvent.color,
-});
+        return datesArray;
+    };
+    const pushDatesArray = (datesArray) => {
+        for (let i in range1) {
+            let row = tableRows[i];
+            for (let j in range2) {
+                let cell = row.children[j];
+                cell.innerHTML = datesArray[i][j];
+            }
+        }
+    };
 
-// navigate the calendar to the correct view
-calendar.navigate(tempEvent.start);
+    // Events Bloc
+    document.addEventListener('change', (event) => {
+        if ( event.target == inputMonth || event.target == inputYear) {
+            // Get dates array structure
+            let datesArray = getDatesArray();
 
-deleteEvent = false;
-popup.close();
-},
-cssClass: 'mbsc-popup-button-primary'
-}]
-});
+            // month number from user input
+            monthNum = parseInt(inputMonth.value, 10);
 
-// fill popup with a new event data
-mobiscroll.getInst(titleInput).value = tempEvent.title;
-mobiscroll.getInst(descriptionTextarea).value = '';
-mobiscroll.getInst(allDaySwitch).checked = true;
-range.setVal([tempEvent.start, tempEvent.end]);
-mobiscroll.getInst(busySegmented).checked = true;
-range.setOptions({ controls: ['date'], responsive: datePickerResponsive });
-pickedColor.style.background = '';
+            // month index
+            monthIndex = monthNum - 1;
 
-// set anchor for the popup
-popup.setOptions({ anchor: elm });
+            // year number from user input
+            yearNum = parseInt(inputYear.value, 10);
 
-popup.open();
-}
+            // generate dates to dates array
+            datesArray = generatorDatesArray(monthNum, monthIndex, yearNum, datesArray);
 
-function createEditPopup(args) {
-var ev = args.event;
+            // Push dates array data to html table
+            pushDatesArray(datesArray);
+        }
+    })
 
-// show delete button inside edit popup
-deleteButton.style.display = 'block';
+    // Bloc for events displayer
+    for (let i in range1) {
+        let row = tableRows[i];
 
-deleteEvent = false;
-restoreEvent = true;
+        for (let j in range2) {
+            let cell = row.children[j];
 
-// set popup header text and buttons for editing
-popup.setOptions({
-headerText: 'Edit event',
-buttons: ['cancel', {
-text: 'Save',
-keyCode: 'enter',
-handler: function () {
-var date = range.getVal();
-// update event with the new properties on save button click
-calendar.updateEvent({
-id: ev.id,
-title: titleInput.value,
-description: descriptionTextarea.value,
-allDay: mobiscroll.getInst(allDaySwitch).checked,
-start: date[0],
-end: date[1],
-free: mobiscroll.getInst(freeSegmented).checked,
-color: ev.color,
-});
+            cell.addEventListener('click', (e) => {
+                let day = parseInt(cell.innerHTML, 10);
 
-// navigate the calendar to the correct view
-calendar.navigate(date[0]);;
+                let clickedDate = new Date(yearNum, monthIndex, day);
 
-restoreEvent = false;
-popup.close();
-},
-cssClass: 'mbsc-popup-button-primary'
-}]
-});
+                for (let i = 1; i <= Object.keys(events).length; i++) {
+                    let eventDate = new Date(events[i].year, (events[i].month - 1), events[i].day);
 
-// fill popup with the selected event data
-mobiscroll.getInst(titleInput).value = ev.title || '';
-mobiscroll.getInst(descriptionTextarea).value = ev.description || '';
-mobiscroll.getInst(allDaySwitch).checked = ev.allDay || false;
-range.setVal([ev.start, ev.end]);
-pickedColor.style.background = ev.color || '';
+                    if (equals(clickedDate, eventDate) == true) {eventContent.innerHTML = "<p>Event that day : " + events[i].content + "</p>";}
+                }
+            })
+        }
+    }
 
-if (ev.free) {
-mobiscroll.getInst(freeSegmented).checked = true;
-} else {
-mobiscroll.getInst(busySegmented).checked = true;
-}
-
-// change range settings based on the allDay
-range.setOptions({
-controls: ev.allDay ? ['date'] : ['datetime'],
-responsive: ev.allDay ? datePickerResponsive : datetimePickerResponsive
-});
-
-// set anchor for the popup
-popup.setOptions({ anchor: args.domEvent.currentTarget });
-popup.open();
-}
-
-var calendar = mobiscroll.eventcalendar('#demo-add-delete-event', {
-clickToCreate: 'double',
-dragToCreate: true,
-dragToMove: true,
-dragToResize: true,
-view: {
-calendar: { labels: true }
-},
-data: myData,
-onEventClick: function (args) {
-oldEvent = Object.assign({}, args.event);
-tempEvent = args.event;
-
-if (!popup.isVisible()) {
-createEditPopup(args);
-}
-},
-onEventCreated: function (args) {
-popup.close();
-// store temporary event
-tempEvent = args.event;
-createAddPopup(args.target);
-},
-onEventDeleted: function () {
-mobiscroll.snackbar({            button: {
-action: function () {
-calendar.addEvent(args.event);
-},
-text: 'Undo'
-},
-message: 'Event deleted'
-});
-}
-});
-
-var popup = mobiscroll.popup('#demo-add-popup', {
-display: 'bottom',
-contentPadding: false,
-fullScreen: true,
-onClose: function () {
-if (deleteEvent) {
-calendar.removeEvent(tempEvent);
-} else if (restoreEvent) {
-calendar.updateEvent(oldEvent);
-}
-},
-responsive: {
-medium: {
-display: 'anchored',
-width: 400,
-fullScreen: false,
-touchUi: false
-}
-}
-});
-
-titleInput.addEventListener('input', function (ev) {
-// update current event's title
-tempEvent.title = ev.target.value;
-});
-
-descriptionTextarea.addEventListener('change', function (ev) {
-// update current event's title
-tempEvent.description = ev.target.value;
-});
-
-allDaySwitch.addEventListener('change', function () {
-var checked = this.checked
-// change range settings based on the allDay
-range.setOptions({
-controls: checked ? ['date'] : ['datetime'],
-responsive: checked ? datePickerResponsive : datetimePickerResponsive
-});
-
-// update current event's allDay property
-tempEvent.allDay = checked;
-});
-
-var range = mobiscroll.datepicker('#event-date', {
-controls: ['date'],
-select: 'range',
-startInput: '#start-input',
-endInput: '#end-input',
-showRangeLabels: false,
-touchUi: true,
-responsive: datePickerResponsive,
-onChange: function (args) {
-var date = args.value;
-// update event's start date
-tempEvent.start = date[0];
-tempEvent.end = date[1];
-}
-});
-
-document.querySelectorAll('input[name=event-status]').forEach(function (elm) {
-elm.addEventListener('change', function () {
-// update current event's free property
-tempEvent.free = mobiscroll.getInst(freeSegmented).checked;
-});
-});
-
-deleteButton.addEventListener('click', function () {
-// delete current event on button click
-calendar.removeEvent(oldEvent);
-popup.close();
-
-// save a local reference to the deleted event
-var deletedEvent = tempEvent;
-
-mobiscroll.snackbar({        button: {
-action: function () {
-calendar.addEvent(deletedEvent);
-},
-text: 'Undo'
-},
-message: 'Event deleted'
-});
-});
-
-colorPicker = mobiscroll.popup('#demo-event-color', {
-display: 'bottom',
-contentPadding: false,
-showArrow: false,
-showOverlay: false,
-buttons: [
-'cancel',
-{
-text: 'Set',
-keyCode: 'enter',
-handler: function (ev) {
-setSelectedColor();
-},
-cssClass: 'mbsc-popup-button-primary'
-}
-],
-responsive: {
-medium: {
-display: 'anchored',
-anchor: document.getElementById('event-color-cont'),
-buttons: {}
-}
-}
-});
-
-function selectColor(color, setColor) {
-var selectedElm = document.querySelector('.crud-color-c.selected');
-var newSelected = document.querySelector('.crud-color-c[data-value="' + color + '"]');
-
-if (selectedElm) {
-selectedElm.classList.remove('selected')
-}
-if (newSelected) {
-newSelected.classList.add('selected')
-}
-if (setColor) {
-pickedColor.style.background = color || '';
-}
-}
-
-function setSelectedColor() {
-tempEvent.color = tempColor;
-pickedColor.style.background = tempColor;
-colorPicker.close();
-}
-
-colorSelect.addEventListener('click', function () {
-selectColor(tempEvent.color || '');
-colorPicker.open();
-});
-
-colorElms.forEach(function (elm) {
-elm.addEventListener('click', function () {
-tempColor = elm.getAttribute('data-value');
-selectColor(tempColor);
-
-if (!colorPicker.s.buttons.length) {
-setSelectedColor();
-}
-});
-});
 </script>
+</body>
+</html>
 
-
-<style>
-    .event-color-c {
-        display: flex;
-        margin: 16px;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .event-color-label {
-        flex: 1 0 auto;
-    }
-
-    .event-color {
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        margin-right: 10px;
-        margin-left: 240px;
-        background: #5ac8fa;
-    }
-
-    .crud-color-row {
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-    }
-
-    .crud-color-c {
-        padding: 3px;
-        margin: 2px;
-    }
-
-    .crud-color {
-        position: relative;
-        min-width: 46px;
-        min-height: 46px;
-        margin: 2px;
-        cursor: pointer;
-        border-radius: 23px;
-        background: #5ac8fa;
-    }
-
-    .crud-color-c.selected,
-    .crud-color-c:hover {
-        box-shadow: inset 0 0 0 3px #007bff;
-        border-radius: 48px;
-    }
-
-    .crud-color:before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -10px;
-        margin-left: -10px;
-        color: #f7f7f7;
-        font-size: 20px;
-        text-shadow: 0 0 3px #000;
-        display: none;
-    }
-
-    .crud-color-c.selected .crud-color:before {
-        display: block;
-    }
-</style>
