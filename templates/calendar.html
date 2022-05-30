@@ -40,21 +40,22 @@
 
 <div>
     <h2 style="align-content: center"> Calendar for 2022-2023 </h2>
-    <p1>Month<p1> <input id="monthInput" type="number" value="6" min="1" max="12" placeholder="Month">
+    <p1>Month<p1> <input id="monthInput" type="number" value="3" min="1" max="12" placeholder="Month">
 
-    <p1>Year<p1> <input id="yearInput" type="number" value="2022" max="2023" placeholder="Year">
+        <p1>Year<p1> <input id="yearInput" type="number" value="2021" min="2000" max="2023" placeholder="Year">
+
 </div>
 <div id="eventContent"></div>
 
 <table id="Table" style="align-content: center">
     <tr>
-        <td class="cell">Sun</td>
-        <td class="cell">Mon</td>
-        <td class="cell">Tue</td>
-        <td class="cell">Wed</td>
-        <td class="cell">Thu</td>
-        <td class="cell">Fri</td>
-        <td class="cell">Sat</td>
+        <th class="cell">Sun</th>
+        <th class="cell">Mon</th>
+        <th class="cell">Tue</th>
+        <th class="cell">Wed</th>
+        <th class="cell">Thu</th>
+        <th class="cell">Fri</th>
+        <th class="cell">Sat</th>
     </tr>
     <tr>
         <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
@@ -86,6 +87,7 @@
 
 <script>
 
+    var today = new Date();
     let yearNum = new Date().getFullYear();
     let monthIndex = new Date().getMonth() - 1;
     // DOM and App variables
@@ -105,7 +107,9 @@
     const events = { 1 : {content: "Summer", year: 2022, month: 6, day: 30},
         2 : {content: "Coding", year: 2022, month: 7, day: 14}
     };
+
     const getDatesArray = () => { return [
+        ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         [[], [], [], [], [], [], []],
         [[], [], [], [], [], [], []],
         [[], [], [], [], [], [], []],
@@ -116,7 +120,7 @@
     };
     const generatorDatesArray = (monthNum, monthIndex, yearNum, datesArray) => {
         let daysCount = new Date(yearNum, monthNum, 0).getDate();
-        let yIndex = 0;
+        let yIndex = 1;
         let range = Array.from({length: daysCount}, (v, i) => (i+1));
 
         for (let i of range) {
@@ -196,4 +200,3 @@
 </script>
 </body>
 </html>
-
