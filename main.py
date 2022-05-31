@@ -1,5 +1,7 @@
 from flask import render_template, redirect, url_for, request
 from __init__ import app
+from datetime import datetime
+import calendar
 
 
 from cruddy.app_crud import app_crud
@@ -47,8 +49,14 @@ def calendar3():
     return render_template("calendar3.html")
 
 @app.route('/calendar')
-def calendar():
-    return render_template("calendar.html")
+def cal():
+    currentday = datetime.now().day
+    monthnum = datetime.now().month
+    currentmonth = calendar.month_name
+    currentyear = datetime.now().year
+    return render_template("calendar.html", currentday=currentday, monthnum=monthnum, currentmonth=currentmonth, currentyear=currentyear)
+
+
 
 @app.route('/calendar4')
 def calendar4():

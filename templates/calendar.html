@@ -15,10 +15,16 @@
         font-size: 100px;
 
     }
-    p {
+    p1 {
         text-align: -webkit-left;
         font-family: Montserrat;
-        font-size: 15px;
+        font-size: 25px;
+
+    }
+    p {
+        text-align: center;
+        font-family: Optima;
+        font-size: 40px;
 
     }
     div {
@@ -50,25 +56,22 @@
     <title>Hack Club Calendar</title>
 </head>
 <body style="background-color: powderblue" >
-<p>
+<p1>
     Background Change!
     <button class="dark" onclick="darkMode()">Dark</button>
     <button onclick="returnColor()"> Light</button>
-    <button onclick="RANDOMCOLOR()">Random Background</button>
-</p>
-
+    <button onclick="RANDOMCOLOR()"> Random Background</button>
+</p1>
 
 <h1 style="align-content: center">
    Hack Club Events Calendar
 </h1>
 
 <div>
-    <h2 style="align-content: center"> Year of 2022 and 2023! </h2>
-    <h2 style="align-content: center"> Input a day! </h2>
 
-    <p1>Month<p1> <input id="monthInput" type="number" value="" min="1" max="12" placeholder="Month">
-        <p1>Year<p1> <input id="yearInput" type="number" value="" min="2020" max="2023" placeholder="Year">
-
+    <h3 style="align-content: center"> Input a day with the arrows to see the events planned!! </h3>
+    <p1 class="p1"><p1> <input id="monthInput" type="number" value="" min="1" max="12" placeholder="Month"><input id="yearInput" type="number" value="" min="2020" max="2023" placeholder="Year">
+    <p>Today is {{ currentmonth [monthnum] }} {{ currentday }}, {{ currentyear }}</p>
 </div>
 <div id="eventContent"></div>
 
@@ -124,9 +127,9 @@
     const range1 = Array.from({length: 6}, (v, i) => i);
     const range2 = Array.from({length: 7}, (v, i) => i);
     const equals = (date1, date2) => {
-        return (date1.getFullYear() == date2.getFullYear() &&
-            date1.getMonth() == date2.getMonth() &&
-            date1.getDate() == date2.getDate())
+        return (date1.getFullYear() === date2.getFullYear() &&
+            date1.getMonth() === date2.getMonth() &&
+            date1.getDate() === date2.getDate())
             ? true : false;
     };
     const events = { 1 : {content: "Summer", year: 2022, month: 7, day: 9},
@@ -143,7 +146,7 @@
         12 : {content: "Coding of Javascript", year: 2022, month: 8, day: 1},
         13 : {content: "Game", year: 2022, month: 8, day: 3},
         14 : {content: "CSS", year: 2022, month: 8, day: 5},
-        15 : {content: "C++", year: 2022, month: 7, day: 7}
+        15 : {content: "C++", year: 2022, month: 8, day: 7}
     };
 
     const getDatesArray = () => { return [
