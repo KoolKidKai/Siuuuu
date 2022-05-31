@@ -1,9 +1,8 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 from flask_login import login_required
+from cruddy.query import Users, users_all, user_by_id, users_ilike
 
-from cruddy.query import *
-from cruddy.query import logout
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
