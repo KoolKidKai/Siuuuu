@@ -5,15 +5,9 @@ from flask_login import current_user, login_user, logout_user
 
 # this is method called by frontend, it has been randomized between Alchemy and Native SQL for fun
 def users_all():
-    """  May have some problems with sql in deployment
-    if random.randint(0, 1) == 0:
-        table = users_all_alc()
-    else:
-        table = users_all_sql()
-    return table
-    """
-
-    return users_all_alc()
+    table = Users.query.all()
+    json_ready = [peep.read() for peep in table]
+    return json_ready
 
 
 # SQLAlchemy extract all users from database
@@ -117,37 +111,19 @@ def logout():
 if __name__ == "__main__":
 
     # Look at table
-    print("Print all at start")
+    print("Print all")
     for user in users_all():
         print(user)
     print()
-
-    """ Password Lookup Sample Code """
-    # Expected success on Email and Password lookup
-    name = "Thomas Edison"
-    email = "tedison@example.com"
-    psw = "123toby"
-    print(f"Check is_user with valid email and password {email}, {psw}", is_user(email, psw))
-
-    # Expected failure on Email and Password lookup
-    psw1 = "1234puffs"
-    print(f"Check is_user with invalid password: {email}, {psw1}", is_user(email, psw1))
-
-    """ Authorization Screen Sample Code"""
-    # Expected failure as user exists
-    print(f"Check authorize with existing email and password: {name}, {psw}", authorize(name, email, psw))
-
-    # Expected success as user does not exist
-    name1 = "Coco Puffs"
-    email1 = "puffs@example.com"
-    print(f"Check authorize with new email and password: {name1}, {psw1}", authorize(name1, email1, psw1))
 
     # Look at table
-    print()
-    print("Print all at end")
-    for user in users_all():
+    print("Print ilike example.com")
+    for user in users_ilike("example.com"):
         print(user)
+    print()
 
-    # Clean up data from run, so it can run over and over the same
-    user_record = user_by_email(email1)
-    user_record.delete()
+    print("Print userID 2")
+    print(user_by_id(2).read())
+
+    print("Print userID tedison@example.com")
+    print(user_by_email("tedison@example.com").read())
