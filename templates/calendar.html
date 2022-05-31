@@ -129,8 +129,21 @@
             date1.getDate() == date2.getDate())
             ? true : false;
     };
-    const events = { 1 : {content: "Summer", year: 2022, month: 6, day: 30},
-        2 : {content: "Coding", year: 2022, month: 7, day: 14}
+    const events = { 1 : {content: "Summer", year: 2022, month: 7, day: 9},
+        2 : {content: "Coding", year: 2022, month: 7, day: 11},
+        3 : {content: "Nothing", year: 2022, month: 7, day: 13},
+        4 : {content: "Coding of choice!", year: 2022, month: 7, day: 15},
+        5 : {content: "Lesson of HTML", year: 2022, month: 7, day: 17},
+        6 : {content: "Coding", year: 2022, month: 7, day: 19},
+        7 : {content: "Python", year: 2022, month: 7, day: 21},
+        8 : {content: "Coding", year: 2022, month: 7, day: 23},
+        9 : {content: "Lesson", year: 2022, month: 7, day: 25},
+        10 : {content: "Coding", year: 2022, month: 7, day: 27},
+        11 : {content: "HTML", year: 2022, month: 7, day: 29},
+        12 : {content: "Coding of Javascript", year: 2022, month: 8, day: 1},
+        13 : {content: "Game", year: 2022, month: 8, day: 3},
+        14 : {content: "CSS", year: 2022, month: 8, day: 5},
+        15 : {content: "C++", year: 2022, month: 7, day: 7}
     };
 
     const getDatesArray = () => { return [
@@ -236,6 +249,86 @@
     function RANDOMCOLOR() {
         let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
         changeColor(color);
+    }
+    function display(id) {
+        let task = "task." + id;
+        const show_input = "show_input." + id;
+        localStorage.setItem(task, document.getElementById(task).value); // stores value in session
+        const TASK = localStorage.getItem(task); // a new variable for the list
+        const list = document.createElement('list');
+        list.innerHTML = "<li>" + TASK + "</li>"; // list
+        document.getElementById(show_input).appendChild(list); // adding to list
+        localStorage.setItem(show_input, document.getElementById(show_input).innerHTML)
+        document.getElementById(task).value = null; // clears input box, QOL update
+    }
+
+    for (let j = 0; j < 5; j++) {
+        for (let i = 1; i < 8; i++) {
+            let task = "task." + j;
+            task = task + i;
+            let button = "add_task." + j;
+            button = button + i;
+            document.getElementById(task)
+                .addEventListener("keyup", function (event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) { // maybe it's deprecated, but it works
+                        document.getElementById(button).click(); // button runs the display() code
+                    }
+                });
+        }
+    }
+
+    function keep() {
+        for (let j = 0; j < 5; j++) {
+            for (let i = 1; i < 8; i++) {
+                task = "task." + j;
+                task = task + i;
+                show_input = "show_input." + j;
+                show_input = show_input + i;
+                if (typeof localStorage.getItem(task) != null) {
+                    document.getElementById(show_input).innerHTML = localStorage.getItem(show_input);
+                }
+            }
+        }
+    }
+
+    function reply_click(clicked_id)
+    {
+        alert(clicked_id);
+    }
+
+    function myFunction() {    //Code for logic gate
+        const x = document.getElementById("firstcondition")
+        const y = document.getElementById("secondcondition")
+
+        if (x.checked || y.checked) {   //or
+            document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/vomilton.png\" alt=\"Eh...\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+        }
+        if (x.checked && y.checked) {   //and
+            document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/ankles.png\" alt=\"Sheeeeeesh\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+        }
+        if (!(x.checked || y.checked)) {    //nor
+            document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/anirudhsus.png\" alt=\"Sadge\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+
+        }
+    }
+
+    function changeImage(ndx) {     <!-- if else statement using the function changeImage   -->
+        if (document.getElementById("img" + ndx).src == document.getElementById('img_orig' + ndx).innerHTML) { <!-- if original switch to gray   -->
+            document.getElementById('img' + ndx).src = document.getElementById('img_gray' + ndx).innerHTML;
+        } else {
+            document.getElementById('img' + ndx).src = document.getElementById('img_orig' + ndx).innerHTML;  <!-- if gray switch to original   -->
+        }
+    }
+
+    function remove(id) {
+        const task = "task." + id;
+        const show_input = "show_input." + id;
+        // clearing web storage
+        localStorage.removeItem(task);
+        localStorage.removeItem(show_input);
+        // clearing cell text
+        document.getElementById(show_input).innerHTML = null;
     }
 </script>
 </body>
