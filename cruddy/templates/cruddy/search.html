@@ -33,19 +33,15 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
     </div>
     <!-- result of search -->
     <div class="container">
-        <table style="width: 100%; border: 1px solid; font-size: large; ">
+        <table style="width: 100%; border: 1px solid; font-size: large">
             <thead style="border: 1px;">
                 <tr>
                     <th>Member Name</th>
-                    <th>Grade</th>
-                    <th>Position</th>
                 </tr>
             </thead>
             <tbody style="border: 1px solid;">
                 <tr>
                     <td id="Name"></td>
-                    <td id="Grade"></td>
-                    <td>holder</td>
                 </tr>
             </tbody>
         </table>
@@ -73,11 +69,9 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                 .then(function (response) {
                     // prepare HTML search result container for new output
                     const resultContainer = document.getElementById("Name");
-                    const resultContainer2 = document.getElementById("Grade")
                     // clean up from previous search
-                    while (resultContainer.firstChild, resultContainer2.firstChild) {
+                    while (resultContainer.firstChild) {
                         resultContainer.removeChild(resultContainer.firstChild);
-                        resultContainer2.removeChild(resultContainer2.firstChild);
                     }
                     // trap error response from Web API
                     if (response.status !== 200) {
@@ -86,26 +80,16 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                         const div = document.createElement("div");
                         div.innerHTML = errorMsg;
                         resultContainer.appendChild(div);
-                        const div2 = document.createElement("div2");
-                        div2.innerHTML = errorMsg;
-                        resultContainer2.appendChild(div2);
                         return;
                     }
                     // response contains valid result
-                    response.json().then(function (data1) {
+                    response.json().then(function (data) {
                         // loop through JSON and build HTML output
-                        for (let i = 0; i < data1.length; i++) {
+                        for (let i = 0; i < data.length; i++) {
                             const div = document.createElement("div");
-                            div.innerHTML = data1[i].name;
+                            div.innerHTML = data[i].name;
                             resultContainer.appendChild(div);
                         }
-                    response.json().then(function (data2) {
-                        for (let i = 0; i < data2.length; i++) {
-                            const div2 = document.createElement("div2");
-                            div2.innerHTML = data2[i].email;
-                            resultContainer2.appendChild(div2);
-                            }
-                        })
                     })
                 })
         }

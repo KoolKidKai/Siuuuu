@@ -14,6 +14,11 @@ app.register_blueprint(app_crud_api)
 
 
 @app.route('/', methods=['GET', 'POST'])
+def home():
+    return render_template('index.html')
+
+
+@app.route('/login')
 def login():
     error = None
     if request.method == 'POST':
@@ -23,11 +28,10 @@ def login():
             return render_template('index.html')
     return render_template('login.html', error=error)
 
+
 @app.route('/home', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
-
-
 
 
 @app.route('/notes')
