@@ -71,6 +71,10 @@ def clubRoster():
 def join():
     return render_template("join.html")
 
+@app.route('/tasklist')
+def tasklist():
+    return render_template("tasklist.html")
+
 
 
 if __name__ == "__main__":
