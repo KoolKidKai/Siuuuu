@@ -38,7 +38,7 @@ def uploads_endpoint(name):
 
 # register "uploads_endpoint" endpoint so url_for will find all uploaded files
 app.add_url_rule(
-    "/" + app.config['UPLOAD_FOLDER'] + "/<name>", endpoint="uploads_endpoint", build_only=True
+    "/volumes/uploads" + "/<name>", endpoint="uploads_endpoint", build_only=True
 )
 
 
