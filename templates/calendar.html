@@ -11,10 +11,14 @@
 
     h1 {
         text-align: center;
+        font-family: Times;
+        font-size: 100px;
 
     }
     p {
-        text-align: center;
+        text-align: -webkit-left;
+        font-family: Montserrat;
+        font-size: 15px;
 
     }
     div {
@@ -24,7 +28,7 @@
 
     td {
         style: center;
-        border: 5px solid black;
+        border: 5px solid #760ce7;
         height: 3rem;
         width: 3rem;
         text-align: center;
@@ -46,13 +50,22 @@
     <title>Hack Club Calendar</title>
 </head>
 <body style="background-color: powderblue" >
+<p>
+    Background Change!
+    <button class="dark" onclick="darkMode()">Dark</button>
+    <button onclick="returnColor()"> Light</button>
+    <button onclick="RANDOMCOLOR()">Random Background</button>
+</p>
+
 
 <h1 style="align-content: center">
-    See upcoming events for Hack Club!
+   Hack Club Events Calendar
 </h1>
 
 <div>
-    <h2 style="align-content: center"> Calendar for 2022-2023 </h2>
+    <h2 style="align-content: center"> Year of 2022 and 2023! </h2>
+    <h2 style="align-content: center"> Input a day! </h2>
+
     <p1>Month<p1> <input id="monthInput" type="number" value="" min="1" max="12" placeholder="Month">
         <p1>Year<p1> <input id="yearInput" type="number" value="" min="2020" max="2023" placeholder="Year">
 
@@ -208,6 +221,21 @@
                 }
             })
         }
+    }
+    function returnColor() {
+        document.body.style.background = "#FAEBD7";
+        document.body.style.color = 'black';
+    }
+    function darkMode() {
+        document.body.style.color = "#b3b3b3";
+        document.body.style.background = "#35363a";
+    }
+    function changeColor(color) {
+        document.body.style.background = color;
+    }
+    function RANDOMCOLOR() {
+        let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        changeColor(color);
     }
 </script>
 </body>
