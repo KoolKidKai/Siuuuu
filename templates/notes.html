@@ -39,9 +39,15 @@
 
     </a>
 </nav>
+<div class="container my-4">
+    <h1>Upload files here!</h1>
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+    <p><img id="output" width="200" /></p>
+</div>
 
 <div class="container my-3">
-    <h1>Take your Notes here</h1>
+    <h1>Write Your Notes!</h1>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">
@@ -71,6 +77,12 @@
 
 <script>
     showNotes();
+
+    var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+
 
     // If user adds a note, add it to the localStorage
     let addBtn = document.getElementById("addBtn");

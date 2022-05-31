@@ -48,6 +48,8 @@
                                 <th>Name</th>
                                 <th>Grade</th>
                                 <th>Position</th>
+                                <th>Notes</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -57,11 +59,20 @@
                                 Prepare table for display
                                     caution: phone number needs "~" format step to force type to string
                                 -->
+                                {% set pn = "" ~ row['phone'] %}
+                                {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
                                 <tr>
-                                    <td>{{ row['userID'] }}</td>
+                                    <td><a href="{{ url_for('crud.read', userID=row['userID']) }}">{{ row['userID'] }}</a></td>
                                     <td>{{ row['name'] }}</td>
                                     <td>{{ row['email'] }}</td>
-                                    <td>{{ row['password'] }}</td>
+                                    <td>{{ pnf }}</td>
+                                    <td><a href="{{ url_for('notes.notes_select', userID=row['userID']) }}">{{ row['notes'] | length }}</a></td>
+                                    <td>
+                                        {% if table | length != 1 %}
+                                            <a href="{{ url_for('crud.read', userID=row['userID']) }}">Update</a>,
+                                        {% endif %}
+                                        <a href="{{ url_for('crud.delete', userID=row['userID']) }}">Delete</a>
+                                    </td>
                                 </tr>
                             {% endfor %}
                             </tbody>

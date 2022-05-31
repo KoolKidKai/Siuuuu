@@ -15,3 +15,13 @@ node_modules
 *.xml
 *.pyc
 *.pyc
+*.pyc
+*.pyc
+*.pyc
+*.pyc
+*.pyc
+*.pyc
+cruddy/__pycache__/app_crud.cpython-39.pyc
+cruddy/__pycache__/app_crud_api.cpython-39.pyc
+cruddy/__pycache__/model.cpython-39.pyc
+cruddy/__pycache__/query.cpython-39.pyc
