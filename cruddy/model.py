@@ -62,13 +62,17 @@ class Users(UserMixin, db.Model):
     name = db.Column(db.String(255), unique=False, nullable=False)
     email = db.Column(db.String(255), unique=False, nullable=False)
     password = db.Column(db.String(255), unique=False, nullable=False)
+    grade = db.Column(db.String(255), unique=False, nullable=False)
+    position = db.Column(db.String(255), unique=False, nullable=False)
     notes = db.relationship("Notes", cascade='all, delete', backref='users', lazy=True)
 
     # constructor of a User object, initializes of instance variables within object
-    def __init__(self, name, email, password):
+    def __init__(self, name, email, password, grade, position):
         self.name = name
         self.email = email
         self.password = password
+        self.grade = grade
+        self.position = position
 
 
     def __repr__(self):
@@ -93,6 +97,8 @@ class Users(UserMixin, db.Model):
             "name": self.name,
             "email": self.email,
             "password": self.password,
+            "grade": self.grade,
+            "position": self.position,
             "notes": self.notes,
             "query": "by_alc"  # This is for fun, a little watermark
         }
@@ -105,7 +111,7 @@ class Users(UserMixin, db.Model):
         }
     # CRUD update: updates users name, password, phone
     # returns self
-    def update(self, name="", email="", password=""):
+    def update(self, name="", email="", password="", grade="", position=""):
         """only updates values with length"""
         if len(name) > 0:
             self.name = name
@@ -113,6 +119,10 @@ class Users(UserMixin, db.Model):
             self.email = email
         if len(password) > 0:
             self.set_password(password)
+        if len(grade) > 0:
+            self.grade = grade
+        if len(position) > 0:
+            self.position = position
         db.session.commit()
         return self
 

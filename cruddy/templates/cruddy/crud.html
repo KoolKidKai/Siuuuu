@@ -37,6 +37,8 @@ password: hackclub -->
                         <th><label for="name">Name</label></th>
                         <th><label for="email">Email</label></th>
                         <th><label for="password">Password</label></th>
+                        <th><label for="grade">Grade</label></th>
+                        <th><label for="position">Position</label></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -47,6 +49,8 @@ password: hackclub -->
                         </td>
                         <td><input type="text" value="{{ row.name }}" name="name" id="name" required></td>
                         <td><input type="email" value="{{ row.email }}" name="email" id="email" placeholder="abc@xyz.org" required></td>
+                        <td><input type="text" value="{{ row.grade }}" name="grade" id="grade" placeholder="Grade" required></td>
+                        <td><input type="text" value="{{ row.position }}" name="position" id="position" placeholder="Position" required></td>
                         <td><input type="password" name="password" id="password" required></td>
                         <td><input type="submit" value="Update"></td>
                     </tr>
@@ -62,6 +66,8 @@ password: hackclub -->
                     <tr>
                         <th><label for="name">Name</label></th>
                         <th><label for="email">Email</label></th>
+                        <th><label for="grade">Grade</label></th>
+                        <th><label for="position">Position</label></th>
                         <th><label for="password">Password</label></th>
                     </tr>
                     </thead>
@@ -69,6 +75,8 @@ password: hackclub -->
                     <tr>
                         <td><input type="text" name="name" id="name" required></td>
                         <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
+                        <td><input type="text" name="grade" id="grade" required></td>
+                        <td><input type="text" name="position" id="position" required></td>
                         <td><input type="password" name="password" id="password" required></td>
                         <td><input type="submit" value="Create"></td>
                     </tr>
@@ -89,6 +97,8 @@ password: hackclub -->
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Grade</th>
+                            <th>Position</th>
                             <th>Notes</th>
                             <th>Action</th>
                         </tr>
@@ -104,6 +114,8 @@ password: hackclub -->
                                 <td><a href="{{ url_for('crud.read', userID=row['userID']) }}">{{ row['userID'] }}</a></td>
                                 <td>{{ row['name'] }}</td>
                                 <td>{{ row['email'] }}</td>
+                                <td>{{ row['grade'] }}</td>
+                                <td>{{ row['position'] }}</td>
                                 <td><a href="{{ url_for('notes.notes_select', userID=row['userID']) }}">{{ row['notes'] | length }}</a></td>
                                 <td>
                                     {% if table | length != 1 %}
