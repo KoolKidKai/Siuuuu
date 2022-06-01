@@ -1,6 +1,12 @@
 {% include navigation.html %}
 
-{% include sponsornavbar.html %}
+<table>
+    <tr>
+        <td><a href="finalPBL">Individual Requirements</a></td>
+        <td><a href="techGuides">Technical Guidelines</a><td>
+        <td><a href="assesments">Sponsor & Team Assesment</a></td>
+    </tr>
+</table
 
 # Sponsor Presentation 3/28
 
