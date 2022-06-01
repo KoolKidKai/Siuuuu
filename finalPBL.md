@@ -3,7 +3,7 @@
 # Success and Achievements #
 
 Main Goals Achieved (7/8):
-- [ ] Fully Deploy
+- [x] Fully Deploy
 - [x] [Team Roster using database/CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/crud_async.html)
 - [x] [Formatted Search for club members](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/search.html)
 - [x] [Calendar containing important dates/events](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/calendar.html)
@@ -26,9 +26,18 @@ Assignments (/3):
 - leadership page
 
 ### Tanay ###
-Assignments (/2):
-- Full deployment
-- calendar
+Total Self-Grade Assessment: 4.8/5
+
+Individual: 2/2
+
+Team: 2.8/3
+
+Assignments (4/4):
+- [Full deployment](https://github.com/KoolKidKai/Siuuuu/blob/main/deploymentguide.md)
+- [calendar](https://github.com/KoolKidKai/Siuuuu/commit/75f88b883f023e2dcb3369ba5549098900907bc2)
+- [Task List First Version](https://github.com/KoolKidKai/Siuuuu/commit/d48794b1f06b4378961f4352d5db016e237ac0d8)
+- [Task List with CSS Updated](https://github.com/KoolKidKai/Siuuuu/commit/9b89b0ebf8f006048c3e0e2845b7ed82776ac818)
+- [change/forgot password](https://github.com/KoolKidKai/Siuuuu/commit/3632808904c1239394df04601d07a410693e7c6f)
 
 ### Armaan ###
 Assignments (/3):
