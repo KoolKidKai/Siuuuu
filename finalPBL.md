@@ -38,8 +38,11 @@ Assignments (/3):
 
 ### Ritvik ###
 Total Self-Grade Assessment: 4.9/5
+
 Individual: 2/2
+
 Team: 2.9/3
+
 Assignments (6/6):
 - [Authentication/Login for CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/login.py)
 - [Authentication/Login for Main Website](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/login.html)
@@ -48,6 +51,7 @@ Assignments (6/6):
 - [Add new columns and organize to fit purpose into model](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/model.py)
 - [Add new columns into crud.html](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/crud.html)
 
+---------------------------------------------------------------------------------------------------------------------------------------
 ## Team ##
 
 
