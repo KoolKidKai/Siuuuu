@@ -2,7 +2,7 @@
 
 # Success and Achievements #
 
-Main Goals Achieved (7/8):
+Main Goals Achieved (8/8):
 - [x] Fully Deploy
 - [x] [Team Roster using database/CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/crud_async.html)
 - [x] [Formatted Search for club members](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/search.html)
@@ -48,9 +48,9 @@ Assignments (/3):
 ### Ritvik ###
 Total Self-Grade Assessment: 4.9/5
 
-Individual: 2/2
+Individual: 2/2; Completed all individual assignments on time and done properly. Used a lot of class time (at home when not at school) to do work and accomplished all goals set out for group. 
 
-Team: 2.9/3
+Team: 2.9/3; Documented project pretty well, has all required features with new creative aspects, and finished all work on time while utilizing class time very efficiently. 
 
 Assignments (6/6):
 - [Authentication/Login for CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/login.py)
