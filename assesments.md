@@ -16,6 +16,7 @@ Final Sentiments:
 # Team Assesments #
 ## Reviewed  by Colin Howard - Scrum Lord ##
 [6/1 Team Review](https://github.com/KoolKidKai/Siuuuu/issues/53)
+
 [5/18 Team Review](https://github.com/KoolKidKai/Siuuuu/issues/34)
 
 # Teacher Assesment #
