@@ -1,5 +1,7 @@
 {% include navigation.html %}
+
 {% include finalNavbar.html %}
+
 
 # Success and Achievements #
 
