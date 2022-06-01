@@ -1,5 +1,5 @@
 from flask import render_template, redirect, url_for, request, send_from_directory
-from __init__ import app, login_manager
+from __init__ import app
 from flask_login import login_required
 
 from cruddy.app_crud import app_crud
@@ -12,12 +12,8 @@ app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_notes)
 
-@login_manager.unauthorized_handler
-def unauthorized():
-    """Redirect unauthorized users to Login page."""
-    app.config['NEXT_PAGE'] = request.endpoint
-    return redirect(url_for('login'))
-# Route for handling the login page logic
+
+
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -70,6 +66,10 @@ def clubRoster():
 @app.route('/join')
 def join():
     return render_template("join.html")
+
+@app.route('/tasklist')
+def tasklist():
+    return render_template("tasklist.html")
 
 
 

@@ -1,17 +1,25 @@
+{% include navigation.html %}
+
+<table>
+    <tr>
+        <td><a href="finalPBL">Individual Requirements</a></td>
+        <td><a href="techGuides">Technical Guidelines</a><td>
+        <td><a href="assesments">Sponsor & Team Assesment</a></td>
+    </tr>
+</table
+
 # Success and Achievements #
 
 Main Goals Achieved (4/8):
-- [x] Fully Deploy
-- [ ] Team Roster using database/CRUD
-- [x] Formatted Search for club members
-- [x] calendar containing important dates/events
-- [ ] Leadership page
-- [x] How to Join
-- [ ] Authorization
-- [ ] Meaningful capture (local browser based notes keeper)
+- [ ] Fully Deploy
+- [x] [Team Roster using database/CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/crud_async.html)
+- [x] [Formatted Search for club members](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/search.html)
+- [ ] calendar containing important dates/events
+- [x] [Leadership page](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/clubRoster.html)
+- [x] How to Join ?where'd it go?
+- [x] [Authorization](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/login.py)
+- [x] [Meaningful capture (local browser based notes keeper)](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/notes.html)
 
-Extras (/):
-- In progress
 
 [Video/Advertisement]()
 
