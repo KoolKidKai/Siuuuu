@@ -2,9 +2,9 @@
 
 {% include finalNavbar.html %}
 
-# Sponsor Assesment #
+# Sponsor Assesment
 
-## Reviewed by: Arnav, Rishi and Nathan ##
+## Reviewed by: Arnav, Rishi and Nathan
 
 Final Sentiments: 
 - Nice styling
