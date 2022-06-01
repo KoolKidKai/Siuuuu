@@ -37,6 +37,9 @@ Assignments (/3):
 - Home Page
 
 ### Ritvik ###
+Total Self-Grade Assessment: 4.9/5
+Individual: 2/2
+Team: 2.9/3
 Assignments (6/6):
 - [Authentication/Login for CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/login.py)
 - [Authentication/Login for Main Website](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/login.html)
