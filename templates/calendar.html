@@ -1,140 +1,341 @@
 {% include "layouts/layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Calendar</title>
-</head>
+
+{% set imageurl = "/static/dnhs.jpeg" %}
+
 <style>
-    ul {list-style-type: none;}
-    body {font-family: Verdana, sans-serif;}
 
-    /* Month header */
-    .month {
-        padding: 70px 25px;
+    table {
+        text-align: center;
+        border: 10px solid #760ce7;
+        height: 25rem;
         width: 100%;
-        background: #1abc9c;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Times;
+        font-size: 100px;
+
+    }
+    p1 {
+        text-align: -webkit-left;
+        font-family: Montserrat;
+        font-size: 25px;
+
+    }
+    p {
+        text-align: center;
+        font-family: Optima;
+        font-size: 40px;
+
+    }
+    div {
+        text-align: center;
+
+    }
+
+    td {
+        style: center;
+        border: 5px solid #760ce7;
+        height: 3rem;
+        width: 3rem;
         text-align: center;
     }
 
-    /* Month list */
-    .month ul {
-        margin: 0;
-        padding: 0;
+    td:hover {
+        cursor: pointer;
+        background-color: #42e2f4;
     }
 
-    .month ul li {
-        color: white;
-        font-size: 20px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-    }
-
-    /* Previous button inside month header */
-    .month .prev {
-        float: left;
-        padding-top: 10px;
-    }
-
-    /* Next button */
-    .month .next {
-        float: right;
-        padding-top: 10px;
-    }
-
-    /* Weekdays (Mon-Sun) */
-    .weekdays {
-        margin: 0;
-        padding: 10px 0;
-        background-color:#ddd;
-    }
-
-    .weekdays li {
-        display: inline-block;
-        width: 13.6%;
-        color: #666;
-        text-align: center;
-    }
-
-    /* Days (1-31) */
-    .days {
-        padding: 10px 0;
-        background: #eee;
-        margin: 0;
-    }
-
-    .days li {
-        list-style-type: none;
-        display: inline-block;
-        width: 13.6%;
-        text-align: center;
-        margin-bottom: 5px;
-        font-size:12px;
-        color: #777;
-    }
-
-    /* Highlight the "current" day */
-    .days li .active {
-        padding: 5px;
-        background: #1abc9c;
-        color: white !important
+    .active {
+        background-color: #8cf442;
     }
 </style>
 
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hack Club Calendar</title>
+</head>
 <body>
+<p1>
+    Background Color Change!
+    <button class="dark" onclick="darkMode()">Dark</button>
+    <button onclick="returnColor()"> Light</button>
+    <button onclick="RANDOMCOLOR()"> Random Background</button>
+</p1>
 
-<div class="month">
-    <ul>
-        <li class="prev">&#10094;</li>
-        <li class="next">&#10095;</li>
-        <li>August<br><span style="font-size:18px">2021</span></li>
-    </ul>
+<h1 style="align-content: center">
+    Hack Club Events Calendar
+</h1>
+
+<div>
+
+    <h3 style="align-content: center"> Input a day with the arrows to see the events planned!! </h3>
+    <p1 class="p1"><p1> <input id="monthInput" type="number" value="" min="1" max="12" placeholder="Month"><input id="yearInput" type="number" value="" min="2020" max="2023" placeholder="Year">
+        <p>Today is {{ currentmonth [monthnum] }} {{ currentday }}, {{ currentyear }}</p>
 </div>
+<div id="eventContent"></div>
 
-<ul class="weekdays">
-    <li>Mo</li>
-    <li>Tu</li>
-    <li>We</li>
-    <li>Th</li>
-    <li>Fr</li>
-    <li>Sa</li>
-    <li>Su</li>
-</ul>
+<table id="Table" style="align-content: center">
+    <tr>
+        <th class="cell">Sun</th>
+        <th class="cell">Mon</th>
+        <th class="cell">Tue</th>
+        <th class="cell">Wed</th>
+        <th class="cell">Thu</th>
+        <th class="cell">Fri</th>
+        <th class="cell">Sat</th>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+    <tr>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td>
+        <td class="cell"></td><td class="cell"></td><td class="cell"></td><td class="cell"></td>
+    </tr>
+</table>
 
-<ul class="days">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li><span class="active">10</span></li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
+<script>
 
-</ul>
+    var today = new Date();
+    let yearNum = new Date().getFullYear();
+    let monthIndex = new Date().getMonth() - 1;
+    // DOM and App variables
+    const inputMonth = document.getElementById("monthInput");
+    const inputYear = document.getElementById("yearInput");
+    const table = document.getElementById('Table');
+    const eventContent = document.getElementById('eventContent');
+    const tableRows = table.children[0].children;
+    const range1 = Array.from({length: 6}, (v, i) => i);
+    const range2 = Array.from({length: 7}, (v, i) => i);
+    const equals = (date1, date2) => {
+        return (date1.getFullYear() === date2.getFullYear() &&
+            date1.getMonth() === date2.getMonth() &&
+            date1.getDate() === date2.getDate())
+            ? true : false;
+    };
+    const events = { 1 : {content: "Summer", year: 2022, month: 7, day: 9},
+        2 : {content: "Coding", year: 2022, month: 7, day: 11},
+        3 : {content: "Nothing", year: 2022, month: 7, day: 13},
+        4 : {content: "Coding of choice!", year: 2022, month: 7, day: 15},
+        5 : {content: "Lesson of HTML", year: 2022, month: 7, day: 17},
+        6 : {content: "Coding", year: 2022, month: 7, day: 19},
+        7 : {content: "Python", year: 2022, month: 7, day: 21},
+        8 : {content: "Coding", year: 2022, month: 7, day: 23},
+        9 : {content: "Lesson", year: 2022, month: 7, day: 25},
+        10 : {content: "Coding", year: 2022, month: 7, day: 27},
+        11 : {content: "HTML", year: 2022, month: 7, day: 29},
+        12 : {content: "Coding of Javascript", year: 2022, month: 8, day: 1},
+        13 : {content: "Game", year: 2022, month: 8, day: 3},
+        14 : {content: "CSS", year: 2022, month: 8, day: 5},
+        15 : {content: "C++", year: 2022, month: 8, day: 7}
+    };
 
+    const getDatesArray = () => { return [
+        ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []],
+        [[], [], [], [], [], [], []]
+    ];
+    };
+    const generatorDatesArray = (monthNum, monthIndex, yearNum, datesArray) => {
+        let daysCount = new Date(yearNum, monthNum, 0).getDate();
+        let yIndex = 1;
+        let range = Array.from({length: daysCount}, (v, i) => (i+1));
+
+        for (let i of range) {
+            let switchDate = new Date(yearNum, monthIndex, i).getDay();
+
+            const funSwitch = (switchDate) => ({
+                0: new Function('yIndex', 'datesArray', 'i', "datesArray[0] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                1: new Function('yIndex', 'datesArray', 'i', "datesArray[1] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                2: new Function('yIndex', 'datesArray', 'i', "datesArray[2] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                3: new Function('yIndex', 'datesArray', 'i', "datesArray[3] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                4: new Function('yIndex', 'datesArray', 'i', "datesArray[4] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                5: new Function('yIndex', 'datesArray', 'i', "datesArray[5] = new Date(yearNum, monthIndex, i).getDate(); return yIndex;"),
+                6: new Function('yIndex', 'datesArray', 'i', "datesArray[6] = new Date(yearNum, monthIndex, i).getDate(); yIndex++; return yIndex;")
+            })[switchDate];
+
+            yIndex = funSwitch(switchDate)(yIndex, datesArray[yIndex], i);
+        }
+
+        return datesArray;
+    };
+    const pushDatesArray = (datesArray) => {
+        for (let i in range1) {
+            let row = tableRows[i];
+            for (let j in range2) {
+                let cell = row.children[j];
+                cell.innerHTML = datesArray[i][j];
+            }
+        }
+    };
+
+    // Events Bloc
+    document.addEventListener('change', (event) => {
+        if ( event.target == inputMonth || event.target == inputYear) {
+            // Get dates array structure
+            let datesArray = getDatesArray();
+
+            // month number from user input
+            monthNum = parseInt(inputMonth.value, 10);
+
+            // month index
+            monthIndex = monthNum - 1;
+
+            // year number from user input
+            yearNum = parseInt(inputYear.value, 10);
+
+            // generate dates to dates array
+            datesArray = generatorDatesArray(monthNum, monthIndex, yearNum, datesArray);
+
+            // Push dates array data to html table
+            pushDatesArray(datesArray);
+        }
+    })
+
+    // Bloc for events displayer
+    for (let i in range1) {
+        let row = tableRows[i];
+
+        for (let j in range2) {
+            let cell = row.children[j];
+
+            cell.addEventListener('click', (e) => {
+                let day = parseInt(cell.innerHTML, 10);
+
+                let clickedDate = new Date(yearNum, monthIndex, day);
+
+                alert("New event on " + yearNum + " - " + monthIndex + " - " + day);
+
+
+                for (let i = 1; i <= Object.keys(events).length; i++) {
+                    let eventDate = new Date(events[i].year, (events[i].month - 1), events[i].day);
+
+                    if (equals(clickedDate, eventDate) == true) {eventContent.innerHTML = "<p>Event that day : " + events[i].content + "</p>";}
+                }
+            })
+        }
+    }
+    function returnColor() {
+        document.body.style.background = "#FAEBD7";
+        document.body.style.color = 'black';
+    }
+    function darkMode() {
+        document.body.style.color = "#b3b3b3";
+        document.body.style.background = "#35363a";
+    }
+    function changeColor(color) {
+        document.body.style.background = color;
+    }
+    function RANDOMCOLOR() {
+        let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        changeColor(color);
+    }
+    function display(id) {
+        let task = "task." + id;
+        const show_input = "show_input." + id;
+        localStorage.setItem(task, document.getElementById(task).value); // stores value in session
+        const TASK = localStorage.getItem(task); // a new variable for the list
+        const list = document.createElement('list');
+        list.innerHTML = "<li>" + TASK + "</li>"; // list
+        document.getElementById(show_input).appendChild(list); // adding to list
+        localStorage.setItem(show_input, document.getElementById(show_input).innerHTML)
+        document.getElementById(task).value = null; // clears input box, QOL update
+    }
+
+    for (let j = 0; j < 5; j++) {
+        for (let i = 1; i < 8; i++) {
+            let task = "task." + j;
+            task = task + i;
+            let button = "add_task." + j;
+            button = button + i;
+            document.getElementById(task)
+                .addEventListener("keyup", function (event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) { // maybe it's deprecated, but it works
+                        document.getElementById(button).click(); // button runs the display() code
+                    }
+                });
+        }
+    }
+
+    function keep() {
+        for (let j = 0; j < 5; j++) {
+            for (let i = 1; i < 8; i++) {
+                task = "task." + j;
+                task = task + i;
+                show_input = "show_input." + j;
+                show_input = show_input + i;
+                if (typeof localStorage.getItem(task) != null) {
+                    document.getElementById(show_input).innerHTML = localStorage.getItem(show_input);
+                }
+            }
+        }
+    }
+
+    function reply_click(clicked_id)
+    {
+        alert(clicked_id);
+    }
+
+    function myFunction() {    //Code for logic gate
+        const x = document.getElementById("firstcondition")
+        const y = document.getElementById("secondcondition")
+
+        if (x.checked || y.checked) {   //or
+            document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/vomilton.png\" alt=\"Eh...\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+        }
+        if (x.checked && y.checked) {   //and
+            document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/ankles.png\" alt=\"Sheeeeeesh\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+        }
+        if (!(x.checked || y.checked)) {    //nor
+            document.getElementById("onlyrow").innerHTML = "<img src=\"/static/assets/ethanimages/anirudhsus.png\" alt=\"Sadge\" style=\"width: 200px; height: 200px; object-fit: cover\" ></a>"
+
+        }
+    }
+
+    function changeImage(ndx) {     <!-- if else statement using the function changeImage   -->
+        if (document.getElementById("img" + ndx).src == document.getElementById('img_orig' + ndx).innerHTML) { <!-- if original switch to gray   -->
+            document.getElementById('img' + ndx).src = document.getElementById('img_gray' + ndx).innerHTML;
+        } else {
+            document.getElementById('img' + ndx).src = document.getElementById('img_orig' + ndx).innerHTML;  <!-- if gray switch to original   -->
+        }
+    }
+
+    function remove(id) {
+        const task = "task." + id;
+        const show_input = "show_input." + id;
+        // clearing web storage
+        localStorage.removeItem(task);
+        localStorage.removeItem(show_input);
+        // clearing cell text
+        document.getElementById(show_input).innerHTML = null;
+    }
+</script>
 </body>
 </html>
