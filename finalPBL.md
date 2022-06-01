@@ -46,8 +46,8 @@ Team: 2.9/3
 Assignments (6/6):
 - [Authentication/Login for CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/login.py)
 - [Authentication/Login for Main Website](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/login.html)
-- [Meaningful capture (notes/upload)](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/notes.html)
-- [Fix up CRUD to incorporate notes + upload](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/app_crud.py)
+- [Meaningful capture (notes/upload) - outside of CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/notes.html)
+- [Fix CRUD to incorporate notes + upload](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/app_crud.py)
 - [Add new columns and organize to fit purpose into model](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/model.py)
 - [Add new columns into crud.html](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/crud.html)
 
