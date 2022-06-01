@@ -1,3 +1,6 @@
+{% include navigation.html %}
+{% include finalNavbar.html %}
+
 # Success and Achievements #
 
 Main Goals Achieved (4/8):
