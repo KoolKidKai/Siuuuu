@@ -63,7 +63,6 @@ def crud_authorize():
         user_name = request.form.get("user_name")
         email = request.form.get("email")
         password1 = request.form.get("password1")
-        password2 = request.form.get("password1")
         # password should be verified
         if authorize(user_name, email, password1):    # zero index [0] used as user_name and email are type tuple
             return redirect(url_for('crud.crud_login'))
@@ -79,7 +78,9 @@ def create():
         po = Users(
             request.form.get("name"),
             request.form.get("email"),
-            request.form.get("password")
+            request.form.get("password"),
+            request.form.get("grade"),
+            request.form.get("position")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -105,9 +106,11 @@ def update():
         name = request.form.get("name")
         email = request.form.get("email")
         password = request.form.get("password")
+        grade = request.form.get("grade")
+        position = request.form.get("position")
         po = user_by_id(userid)
         if po is not None:
-            po.update(name, email, password)
+            po.update(name, email, password, grade, position)
     return redirect(url_for('crud.crud'))
 
 
