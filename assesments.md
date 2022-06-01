@@ -12,3 +12,13 @@ Final Sentiments:
 - How to join/about is exactly what they were looking for
 - In future, want to add more to user profiles
   - member pages editable from login
+
+# Team Assesments #
+## Reviewed  by Colin Howard - Scrum Lord ##
+[6/1 Team Review](https://github.com/KoolKidKai/Siuuuu/issues/53)
+[5/18 Team Review](https://github.com/KoolKidKai/Siuuuu/issues/34)
+
+# Teacher Assesment #
+To be determined
+
+
