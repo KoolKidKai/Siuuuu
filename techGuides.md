@@ -1,7 +1,5 @@
 {% include navigation.html %}
 
-{% include finalNavbar.html %}
-
 # Tech Requirements #
 - [x] [Database with multiple tables](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/app_crud_api.py)
 - [x] [Authentication with controls](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/login.py)
