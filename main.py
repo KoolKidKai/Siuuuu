@@ -1,5 +1,7 @@
 from flask import render_template, redirect, url_for, request, send_from_directory
 from __init__ import app
+from datetime import datetime
+import calendar
 from flask_login import login_required
 
 from cruddy.app_crud import app_crud
@@ -52,6 +54,14 @@ def none():
 #def page_not_found(e):
 #    # note that we set the 404 status explicitly
 #    return render_template('404.html'), 404
+
+@app.route('/calendar')
+def cal():
+    currentday = datetime.now().day
+    monthnum = datetime.now().month
+    currentmonth = calendar.month_name
+    currentyear = datetime.now().year
+    return render_template("calendar.html", currentday=currentday, monthnum=monthnum, currentmonth=currentmonth, currentyear=currentyear)
 
 
 
