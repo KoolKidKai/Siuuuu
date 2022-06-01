@@ -37,10 +37,13 @@ Assignments (/3):
 - Home Page
 
 ### Ritvik ###
-Assignments (/3):
-- Authentication/Login
-- Format search
-- Meaningful capture
+Assignments (6/6):
+- [Authentication/Login for CRUD](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/login.py)
+- [Authentication/Login for Main Website](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/login.html)
+- [Meaningful capture (notes/upload)](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/notes.html)
+- [Fix up CRUD to incorporate notes + upload](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/app_crud.py)
+- [Add new columns and organize to fit purpose](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/model.py)
+- [Add new columns into crud.html](https://github.com/KoolKidKai/Siuuuu/blob/main/cruddy/templates/cruddy/crud.html)
 
 ## Team ##
 
