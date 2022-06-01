@@ -1,3 +1,7 @@
+{% include navigation.html %}
+
+{% include finalNavbar.html %}
+
 # Sponsor Assesment #
 
 ## Reviewed by: Arnav, Rishi and Nathan ##
