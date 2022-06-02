@@ -62,9 +62,11 @@ def crud_authorize():
         # validation should be in HTML
         user_name = request.form.get("user_name")
         email = request.form.get("email")
+        grade = request.form.get("grade")
+        position = request.form.get("position")
         password1 = request.form.get("password1")
         # password should be verified
-        if authorize(user_name, email, password1):    # zero index [0] used as user_name and email are type tuple
+        if authorize(user_name, email, grade, position, password1):    # zero index [0] used as user_name and email are type tuple
             return redirect(url_for('crud.crud_login'))
     # show the auth user page if the above fails for some reason
     return render_template("authorize.html")
@@ -78,9 +80,9 @@ def create():
         po = Users(
             request.form.get("name"),
             request.form.get("email"),
-            request.form.get("password"),
             request.form.get("grade"),
-            request.form.get("position")
+            request.form.get("position"),
+            request.form.get("password1")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -105,12 +107,12 @@ def update():
         userid = request.form.get("userid")
         name = request.form.get("name")
         email = request.form.get("email")
-        password = request.form.get("password")
         grade = request.form.get("grade")
         position = request.form.get("position")
+        password = request.form.get("password")
         po = user_by_id(userid)
         if po is not None:
-            po.update(name, email, password, grade, position)
+            po.update(name, email, position, grade, password)
     return redirect(url_for('crud.crud'))
 
 
