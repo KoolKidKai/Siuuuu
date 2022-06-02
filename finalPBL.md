@@ -26,6 +26,7 @@ https://user-images.githubusercontent.com/89219634/171521329-444582a4-482d-4736-
 Total Self-Grade Assessment: 4.7/5
 Individual: 1.7/2
 In terms of individual contributions, I may have been lacking in my technical ability and it delayed my work on certain projects and features taht we would have liked to implement. For example, I had a lot of trouble formatting the Member Search and as such, we were not able to integrate it as smoothly into our website as we would have preferred. But in terms of what was required, I believe I finished everything I needed to for Night at the Museum and everything needed to make our sponsors happy.
+
 Team: 3/3
 Within my team roles (Scrum Lord & Github Admin), I think I performed very well. I kept the team on task as much as possible and our website is fully finished, which means I must have done something right. The github pages are well managed and the scrum board has been up to date and a valuable resource throughout the project. I could have laid out more concrete time frames by which we needed to finish certain features and portions of the site in order to reduce stress towards the end of development, however, everything got done regardless.
 
