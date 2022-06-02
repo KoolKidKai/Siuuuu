@@ -62,9 +62,12 @@ Individual: 1.95/2
 Team: 2.75/3
 
 Assignments (3/3):
-- [How to join](https://github.com/KoolKidKai/Siuuuu/commit/687ef913c3b7f989db2c774a79b9b38effd4aad1)
+
 - [Calendar](https://github.com/KoolKidKai/Siuuuu/commit/e66e23037e6e775cc4fb41d31603a4fde1a4844d)
 - [Home Page](https://github.com/KoolKidKai/Siuuuu/commit/d9d589a671ea12e0513ac95184256f611f703aa8)
+- [How to join](https://github.com/KoolKidKai/Siuuuu/commit/687ef913c3b7f989db2c774a79b9b38effd4aad1)
+- [Login](https://github.com/KoolKidKai/Siuuuu/commit/d9a722b7a5b056a6c48439577bae8cc04837f370)
+
 
 ### Ritvik ###
 Total Self-Grade Assessment: 4.9/5
