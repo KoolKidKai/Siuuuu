@@ -140,38 +140,6 @@
             background-color: lightpink;
         }
 
-        .button3:hover:before {
-            transition: .5s all ease;
-            left: 0;
-            right: 0;
-            opacity: 1;
-            z-index: -1;
-
-        }
-        .button4:hover {
-            box-shadow: inset 300px 0 0 0 #87CEEB;
-            cursor: pointer;
-            color: cornflowerblue;
-        }
-        .button4:before {
-            transition: all ease;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            right: 50%;
-            bottom: 0;
-            opacity: 0;
-            content: "";
-            background-color: deepskyblue;
-        }
-        .button4:hover:before {
-            transition: .5s all ease;
-            left: 0;
-            right: 0;
-            opacity: 1;
-            z-index: -1;
-
-        }
         h1 {
             font-family: Times;
             font-size: 90px;
@@ -237,9 +205,8 @@
         <h1>HACKCLUB PLANNER</h1>
     </div>
 
-    <h1>Plan out events that can be added to all for everyone in the group! - <b>Put your main events, deadlines, and important events here.</b></h1>
-    <p1 class="p1"><p1> <input id="monthInput" type="number" value="" min="1" max="12" placeholder="Month"><input id="yearInput" type="number" value="" min="2020" max="2023" placeholder="Year">
-        <p>Today is {{ currentmonth [monthnum] }} {{ currentday }}, {{ currentyear }}</p>
+    <p>Plan out events that can be added to all for everyone in the group! <b>Put your main events, deadlines, and important events here.</b></p>
+        <h3>Today is {{ currentmonth [monthnum] }} {{ currentday }}, {{ currentyear }}</h3>
 
     <!-- button that leads to the repo, can style the button in css above -->
 

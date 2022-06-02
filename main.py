@@ -72,7 +72,7 @@ def calendar2():
 @app.route('/calendar3')
 def calendar3():
     currentday = datetime.now().day
-    montplannum = datetime.now().month
+    monthnum = datetime.now().month
     currentmonth = calendar.month_name
     currentyear = datetime.now().year
     return render_template("calendar3.html", currentday=currentday, monthnum=monthnum, currentmonth=currentmonth, currentyear=currentyear)

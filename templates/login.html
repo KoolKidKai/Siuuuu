@@ -52,6 +52,12 @@
             width: 40%;
             border-radius: 50%;
         }
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+
+        }
 
         .container {
             padding: 16px;
@@ -131,13 +137,13 @@
 </head>
 <body>
 
-<h2>Click the Button Below to Login!</h2>
+<h1>Click the Button Below to Login!</h1>
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
 
-    <form class="modal-content animate" action="/home" method="post">
+    <form class="modal-content animate" action="/calendar3" method="post">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="../static/img.jpg" alt="Image" class="avatar">
@@ -192,7 +198,7 @@
             && document.getElementById("password1").value == "coding" )
         {
             alert( "Successful Login!" );
-            location.href="/";
+            location.href="/calendar3";
         }
         else
         {
