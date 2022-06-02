@@ -13,7 +13,10 @@ Main Goals Achieved (8/8):
 - [x] [Meaningful capture (local browser based notes keeper)](https://github.com/KoolKidKai/Siuuuu/blob/main/templates/notes.html)
 
 
-[Video/Advertisement]()
+Video/Advertisement
+
+https://user-images.githubusercontent.com/89219634/171521329-444582a4-482d-4736-bbc3-f0b267e93a1b.mp4
+
 
 # Self Grades #
 
