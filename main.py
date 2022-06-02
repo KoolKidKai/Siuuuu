@@ -77,6 +77,10 @@ def clubRoster():
 def join():
     return render_template("join.html")
 
+@app.route('/howtojoin')
+def howtojoin():
+    return render_template("howtojoin.html")
+
 @app.route('/tasklist')
 def tasklist():
     return render_template("tasklist.html")
