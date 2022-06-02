@@ -230,40 +230,23 @@
     <title>HackClub Events Planner</title>
 </head>
 
-
+<body style="background-image: url('/static/dnhs.jpeg'); background-size: 100%">
 <div style="margin-left: 50px; margin-right: 50px">
     <!-- Clock display -->
     <div id="top" style="text-align: right" >
-        <h1>PLANNER</h1>
+        <h1>HACKCLUB PLANNER</h1>
     </div>
 
-    <p>This will be where we will build the month version - <b>Put your main events, deadlines, and important events here.</b></p>
+    <h1>Plan out events that can be added to all for everyone in the group! - <b>Put your main events, deadlines, and important events here.</b></h1>
+    <p1 class="p1"><p1> <input id="monthInput" type="number" value="" min="1" max="12" placeholder="Month"><input id="yearInput" type="number" value="" min="2020" max="2023" placeholder="Year">
+        <p>Today is {{ currentmonth [monthnum] }} {{ currentday }}, {{ currentyear }}</p>
 
     <!-- button that leads to the repo, can style the button in css above -->
-    <div id="top" style="text-align: right" >
-        <div>
-            <button class="dark" onclick="darkMode()">DARK MODE</button>
-            <button onclick="returnColor()">Reset Color</button>
-        </div>
-    </div>
-
-    <div class="row" style="align-content: center; margin-left: 43%; margin-right: 38%">
-
-        <button onclick="button_left()">Last Month</button>
-
-        <div id="month" style="text-align: center">May</div>
-        <div id="year" style="text-align: center"> 2022</div>
-
-
-        <button onclick="button_right()"> Next Month </button>
 
     </div>
-
 
 
     <table>
-
-
         <tr>    <!-- tr is the table row and center aligns them  -->
             <th>Sunday</th>      <!-- The days and aligning in the center th is the table header  -->
             <th>Monday</th>
@@ -305,8 +288,6 @@
     </table>
 
     <script>
-
-
         function display(id) {
             let task = "task." + id;
             const show_input = "show_input." + id;
@@ -378,14 +359,6 @@
             }
         }
 
-        function changeColor(color) {
-            document.body.style.background = color;
-        }
-        function RANDOMCOLOR() {
-            let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
-            changeColor(color);
-        }
-
         function remove(id) {
             const task = "task." + id;
             const show_input = "show_input." + id;
@@ -396,14 +369,58 @@
             document.getElementById(show_input).innerHTML = null;
         }
 
-        function returnColor() {
+        function returnColor19() {
             document.body.style.background = "#FAEBD7";
             document.body.style.color = 'black';
         }
-        function darkMode() {
+        function darkMode18() {
             document.body.style.color = "#b3b3b3";
             document.body.style.background = "#35363a";
         }
+        function darkMode17() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }
+        function darkMode16() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }
+        function darkMode15() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }
+        function darkMode14() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }function darkMode13() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }function darkMode12() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }function darkMode11() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }function darkMode2() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }function darkMode3() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }function darkMode4() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }function darkMode5() {
+            document.body.style.color = "#b3b3b3";
+            document.body.style.background = "#35363a";
+        }
+
+
+
+
+
+
+
 
         let n = 0
         let year = 2022
@@ -476,3 +493,4 @@
         }
     </script>
 </div>
+</body>
