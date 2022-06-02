@@ -24,24 +24,18 @@
             font-family: Times;
         }
         body {
-            background-color: antiquewhite;
-            color: black;
-        }
-
-        .dark-mode {
-            background-color: #35363a;
-            color: #b3b3b3;
-            border: 3px white;
+            background-color: #eeecf1;
+            color: #00000b;
         }
         button.task {
             margin-top: 5px;
             font-family: Times;
             padding: 6px 14px;
             border-radius: 6px;
-            color: #3D3D3D;
-            background: #fff;
-            border: 1px solid white;
-            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+            color: #00000b;
+            background: #efecf1;
+            border: 1px solid #00000b;
+            box-shadow: 0px 0.5px 1px rgb(0, 0, 11);
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
@@ -52,18 +46,14 @@
             font-family: Times;
             padding: 6px 14px;
             border-radius: 6px;
-            color: #3D3D3D;
-            background: #fff;
-            border: 1px solid black;
-            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+            color: #00000b;
+            background: #efecf1;
+            border: 1px solid #00000b;
+            box-shadow: 0px 0.5px 1px rgb(239, 236, 241);
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
             transition-duration: 0.4s;
-        }
-        button:hover {
-            background-color: floralwhite;
-            border: 1px solid black;
         }
         table {
             margin-top: 20px;
@@ -72,72 +62,6 @@
             overflow-wrap: anywhere;
             font-family: Times;
             text-align: center;
-        }
-        .button1:hover {
-            box-shadow: inset 300px 0 0 0 #FFD580;
-            cursor: pointer;
-            color: sandybrown;
-        }
-        .button1:before {
-            transition: all ease;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            right: 50%;
-            bottom: 0;
-            opacity: 0;
-            content: "";
-            background-color: sandybrown;
-        }
-
-        .button1:hover:before {
-            transition: .5s all ease;
-            left: 0;
-            right: 0;
-            opacity: 1;
-            z-index: -1;
-
-        }
-        .button2:hover {
-            box-shadow: inset 300px 0 0 0 #ADD8E6;
-            cursor: pointer;
-            color: white;
-        }
-        .button2:before {
-            transition: all ease;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            right: 50%;
-            bottom: 0;
-            opacity: 0;
-            content: "";
-            background-color: lightblue;
-        }
-
-        .button2:hover:before {
-            transition: .5s all ease;
-            left: 0;
-            right: 0;
-            opacity: 1;
-            z-index: -1;
-
-        }
-        .button3:hover {
-            box-shadow: inset 300px 0 0 0 #CBC3E3;
-            cursor: pointer;
-            color: lightpink;
-        }
-        .button3:before {
-            transition: all ease;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            right: 50%;
-            bottom: 0;
-            opacity: 0;
-            content: "";
-            background-color: lightpink;
         }
 
         h1 {
@@ -153,8 +77,8 @@
             text-align: center;
         }
         th, td{
-            border: 3px solid black;
-            column-rule: 4px dotted rgb(79, 185, 227);
+            border: 3px solid #bd9d13;
+            column-rule: 4px dotted rgb(189, 157, 19);
             padding: 10px;
         }
 
@@ -176,14 +100,6 @@
         ul {
             margin-left: -40px;
             list-style-position: inside;
-        }
-        button.rainbow {
-            background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-            background-color:#191919;
-            border-radius:5px;
-        }
-        button.rainbow:hover {
-            animation:slidebg 10s linear infinite;
         }
         @keyframes slidebg {
             to {
