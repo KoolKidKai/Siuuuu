@@ -55,18 +55,18 @@ Assignments (4/4):
 - [change/forgot password](https://github.com/KoolKidKai/Siuuuu/commit/3632808904c1239394df04601d07a410693e7c6f)
 
 ### Armaan ###
-Total Self-Grade Assessment: 4.7/5
+Total Self-Grade Assessment: 4.5/5
 
 Individual: 1.95/2
 
 Team: 2.75/3
 
-Assignments (3/3):
+Assignments (4/4):
 
 - [Calendar](https://github.com/KoolKidKai/Siuuuu/commit/e66e23037e6e775cc4fb41d31603a4fde1a4844d)
 - [Home Page](https://github.com/KoolKidKai/Siuuuu/commit/d9d589a671ea12e0513ac95184256f611f703aa8)
-- [How to join](https://github.com/KoolKidKai/Siuuuu/commit/687ef913c3b7f989db2c774a79b9b38effd4aad1)
-- [Login](https://github.com/KoolKidKai/Siuuuu/commit/d9a722b7a5b056a6c48439577bae8cc04837f370)
+- [How to Join](https://github.com/KoolKidKai/Siuuuu/commit/687ef913c3b7f989db2c774a79b9b38effd4aad1)
+- [Start of Login](https://github.com/KoolKidKai/Siuuuu/commit/ba4b64fde181ac77971ff178103268273c450af6)
 
 
 ### Ritvik ###
