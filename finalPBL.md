@@ -55,7 +55,7 @@ Assignments (4/4):
 - [change/forgot password](https://github.com/KoolKidKai/Siuuuu/commit/3632808904c1239394df04601d07a410693e7c6f)
 
 ### Armaan ###
-Total Self-Grade Assessment: 4.5/5
+Total Self-Grade Assessment: 4.7/5
 
 Individual: 1.95/2
 
