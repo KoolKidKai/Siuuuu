@@ -13,6 +13,8 @@
             verifyPassword("click");
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
+            const grade = document.getElementById("grade").value;
+            const position = document.getElementById("position").value;
             const password = document.getElementById("password").value;
             const requestOptions = {
                 method: 'POST',
@@ -251,6 +253,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Email</th>
                                 <th>Grade</th>
                                 <th>Position</th>
                             </tr>
