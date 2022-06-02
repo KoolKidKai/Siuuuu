@@ -65,7 +65,7 @@ Assignments (4/4):
 
 - [Calendar](https://github.com/KoolKidKai/Siuuuu/commit/e66e23037e6e775cc4fb41d31603a4fde1a4844d)
 - [Home Page](https://github.com/KoolKidKai/Siuuuu/commit/d9d589a671ea12e0513ac95184256f611f703aa8)
-- [How to Join](https://github.com/KoolKidKai/Siuuuu/commit/687ef913c3b7f989db2c774a79b9b38effd4aad1)
+- [How to Join](https://github.com/KoolKidKai/Siuuuu/commit/84278f23d883f9b6e5091ae0ac51df490d4f8b9a)
 - [Start of Login](https://github.com/KoolKidKai/Siuuuu/commit/ba4b64fde181ac77971ff178103268273c450af6)
 
 
