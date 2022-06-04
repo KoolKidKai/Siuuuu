@@ -1,3 +1,4 @@
+{% include "layouts/layout.html" %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,8 +78,8 @@
             text-align: center;
         }
         th, td{
-            border: 3px solid #bd9d13;
-            column-rule: 4px dotted rgb(189, 157, 19);
+            border: 3px solid #00000b;
+            column-rule: 5px dotted rgb(0, 0, 11);
             padding: 10px;
         }
 
@@ -151,7 +152,7 @@
                         <input placeholder="Event" class="text" id="task.{{j}}{{i}}" type="text">
                         <button class="task" id="add_task.{{j}}{{i}}" onclick="display('{{j}}{{i}}')">Add Info</button>
                         <br>
-                        <button class="task" onclick="remove('{{j}}{{i}}')">Clear Task(s)</button>
+                       <!--<button class="task" onclick="remove('{{j}}{{i}}')">Clear Task(s)</button>-->
                     {% endfor %}
                 {% endif %}
 
