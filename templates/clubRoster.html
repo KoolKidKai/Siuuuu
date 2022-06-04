@@ -57,12 +57,6 @@
          cursor: pointer;
          width: 100%;
      }
-     img {
-         float: left;
-         width:  500px;
-         height: 500px;
-         object-fit: cover;
-     }
 
      .button:hover {
          background-color: #555;
@@ -76,6 +70,10 @@
          color: black;
          font-size: larger;
      }
+     h1 {
+         background-color: #DBF9FC;
+         text-align: center
+     }
  </style>
     <meta charset="UTF-8">
     <title>Club Roster</title>
@@ -86,11 +84,10 @@
 <body style="background-image: url('/static/dnhs.jpeg'); background-size: 100%">
 
 <h1 style="text-align: center">Hack Club Leadership</h1>
-<div class="container">
-    <div class="row">
-        <div class="column">
-            <div class="card">
-                <img width="500px" height="500px" src="static/arnav.png" alt="Arnav">
+
+<div class="card-group">
+            <div class="card" width="33%">
+                <img width="500px" height="520px" src="static/arnav.png" alt="Arnav">
                 <div class="container">
                     <h2>Arnav Palkiwhala</h2>
                     <p class="title">Club President &amp; Founder</p>
@@ -98,11 +95,9 @@
                     <p>palkhiwala.arnav@gmail.com</p>
                     <p></p>
                 </div>
-            </div>
         </div>
 
-        <div class="column">
-            <div class="card">
+            <div class="card" width="33%">
                 <img width="500px" height="500px" src="static/rishi.png" alt="Rishi">
                 <div class="container">
                     <h2>Rishi Peddakama</h2>
@@ -111,11 +106,9 @@
                     <p>rishipeddakama@gmail.com</p>
                     <p></p>
                 </div>
-            </div>
         </div>
 
-        <div class="column">
-            <div class="card">
+            <div class="card" width="33%">
                 <img width="500px" height="500px" src="static/nathan.png" alt="Nathan">
                 <div class="container">
                     <h2>Nathan Shih</h2>
@@ -124,8 +117,7 @@
                     <p>nathanshih04@gmail.com</p>
                     <p></p>
                 </div>
-            </div>
-        </div>
+
     </div>
 </div>
 
