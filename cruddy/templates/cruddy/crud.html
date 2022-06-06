@@ -14,6 +14,9 @@ password: hackclub -->
 
 <!-- CONTENT (in <body>), content for this page -->
 {% block content %}
+    <body style="background-image: url('/static/dnhs.jpeg'); background-size: 100%">
+
+
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom border-primary text-dark">
             <span class="fs-4">SQL CRUD Admin Page</span>
@@ -36,9 +39,9 @@ password: hackclub -->
                         <th><label for="userid">User ID</label></th>
                         <th><label for="name">Name</label></th>
                         <th><label for="email">Email</label></th>
-                        <th><label for="password">Password</label></th>
                         <th><label for="grade">Grade</label></th>
                         <th><label for="position">Position</label></th>
+                        <th><label for="password">Password</label></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -131,5 +134,7 @@ password: hackclub -->
             </div>
         </div>
     </div>
+
+    </body>
 
 {% endblock %}

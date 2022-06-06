@@ -23,10 +23,19 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
 
 
-
-            <div class="navbar-nav">
-                <!--root menu -->
-                <a class="nav-link" href={{ url_for('none') }}>Notes and Upload</a>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Member Communications
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <a class="nav-link" href={{ url_for('none') }}>Notes and Upload</a>
+                            <li><a class="dropdown-item" href={{ url_for('tasklist') }}>Tasks and Supplies</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
@@ -39,7 +48,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             <li><a class="dropdown-item" href={{ url_for('crud.crud_login') }}>Full Roster</a></li>
                             <li><a class="dropdown-item" href={{ url_for('crud.search') }}>Member Search</a></li>
                             <li><a class="dropdown-item" href={{ url_for('join') }}>How to Join</a></li>
-                            <li><a class="dropdown-item" href={{ url_for('tasklist') }}>Task List</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -47,6 +55,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <div class="navbar-nav">
                 <!--root menu -->
                 <a class="nav-link" href="/calendar">Calendar <span class="sr-only"></span></a>
+               <!-- <a class="nav-link" href="/login">Administrator Planner <span class="sr-only"></span></a> -->
+
             </div>
 <!--            <div class="navbar-nav">
 
