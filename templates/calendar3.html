@@ -96,10 +96,7 @@
             display: flex;
             justify-content: space-between;
         }
-        ul {
-            margin-left: -40px;
-            list-style-position: inside;
-        }
+
         button.dark {
             background-color: #363d47;
             color: #9daf9b;
@@ -142,7 +139,7 @@
                         <p style="text-align: left"> {{j*7+i}} </p>
                         <ul id="show_input.{{j}}{{i}}"></ul>
                         <input placeholder="Event" class="text" id="task.{{j}}{{i}}" type="text">
-                        <button class="task" id="add_task.{{j}}{{i}}" onclick="display('{{j}}{{i}}')">Add Info</button>
+                        <button class="task" id="add_task.{{j}}{{i}}" onclick="display('{{j}}{{i}}')">Event Add</button>
                         <br>
                        <!--<button class="task" onclick="remove('{{j}}{{i}}')">Clear Task(s)</button>-->
                     {% endfor %}
@@ -154,7 +151,7 @@
                         <p style="text-align: left"> {{j*7+i}} </p>
                         <p id="show_input{{j}}{{i}}"></p>
                         <input placeholder="" class="text" id="task{{j}}{{i}}" type="text">
-                        <button class="task" id="add_task.{{j}}{{i}}" class="task" onclick="display('{{j}}{{i}}')">Add Task</button>
+                        <button class="task" id="add_task.{{j}}{{i}}" class="task" onclick="display('{{j}}{{i}}')">Event Add</button>
                         <br>
                         <button class="task" onclick="remove('{{j}}{{i}}')">Clear</button>
                     {% endfor %}
