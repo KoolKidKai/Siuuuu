@@ -5,167 +5,169 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>HackClub Task List</title>
+        <title>Task and Supplies List</title>
+
+        <style>
+
+            :root {
+                --dark: #374151;
+                --darker: #1F2937;
+                --darkest: #111827;
+                --grey: #6B7280;
+                --pink: #EC4899;
+                --purple: #8B5CF6;
+                --light: #EEE;
+            }
+
+            * {
+                margin: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                color: #FFF;
+                background-color: var(--dark);
+            }
+
+            header {
+                padding: 2rem 1rem;
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            header h1{
+                font-size: 2.5rem;
+                font-weight: 300;
+                color:
+                margin-bottom: 1rem;
+            }
+
+            #new-task-form {
+                display: flex;;
+            }
+
+            input, button {
+                appearance: none;
+                border: none;
+                outline: none;
+                background: none;
+            }
+
+            #new-task-input {
+                flex: 1 1 0%;
+                background-color: var(--darker);
+                padding: 1rem;
+                border-radius: 1rem;
+                margin-right: 1rem;
+                color: var(--light);
+                font-size: 1.25rem;
+            }
+
+            #new-task-input::placeholder {
+                color: var(--grey);
+            }
+
+            #new-task-submit {
+                color: var(--pink);
+                font-size: 1.25rem;
+                font-weight: 700;
+                background-image: linear-gradient(to right, var(--pink), var(--purple));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+
+            #new-task-submit:hover {
+                opacity: 0.8;
+            }
+
+            #new-task-submit:active {
+                opacity: 0.6;
+            }
+
+            main {
+                flex: 1 1 0%;
+                max-width: 800px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .task-list {
+                padding: 1rem;
+            }
+
+            .task-list h2 {
+                font-size: 1.5rem;
+                font-weight: 300;
+                color: var(--grey);
+                margin-bottom: 1rem;
+            }
+
+            #tasks .task {
+                display: flex;
+                justify-content: space-between;
+                background-color: var(--darkest);
+                padding: 1rem;
+                border-radius: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .task .content {
+                flex: 1 1 0%;
+            }
+
+            .task .content .text {
+                color: var(--light);
+                font-size: 1.125rem;
+                width: 100%;
+                display: block;
+                transition: 0.4s;
+            }
+
+            .task .content .text:not(:read-only) {
+                color: var(--pink);
+            }
+
+            .task .actions {
+                display: flex;
+                margin: 0 -0.5rem;
+            }
+
+            .task .actions button {
+                cursor: pointer;
+                margin: 0 0.5rem;
+                font-size: 1.125rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: 0.4s;
+            }
+
+            .task .actions button:hover {
+                opacity: 0.8;
+            }
+
+            .task .actions button:active {
+                opacity: 0.6;
+            }
+
+            .task .actions .edit {
+                background-image: linear-gradient(to right, var(--pink), var(--purple));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .task .actions .delete {
+                color: crimson;
+            }
+        </style>
+
     </head>
-    <style>
-
-        :root {
-            --dark: #374151;
-            --darker: #1F2937;
-            --darkest: #111827;
-            --grey: #6B7280;
-            --pink: #EC4899;
-            --purple: #8B5CF6;
-            --light: #EEE;
-        }
-
-        * {
-            margin: 0;
-            box-sizing: border-box;
-            font-family: "Chalkduster", sans-serif;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            color: #FFF;
-            background-color: var(--dark);
-        }
-
-        header {
-            padding: 2rem 1rem;
-            max-width: 800px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        header h1{
-            font-size: 2.5rem;
-            font-weight: 300;
-            color:
-            margin-bottom: 1rem;
-        }
-
-        #new-task-form {
-            display: flex;;
-        }
-
-        input, button {
-            appearance: none;
-            border: none;
-            outline: none;
-            background: none;
-        }
-
-        #new-task-input {
-            flex: 1 1 0%;
-            background-color: var(--darker);
-            padding: 1rem;
-            border-radius: 1rem;
-            margin-right: 1rem;
-            color: var(--light);
-            font-size: 1.25rem;
-        }
-
-        #new-task-input::placeholder {
-            color: var(--grey);
-        }
-
-        #new-task-submit {
-            color: var(--pink);
-            font-size: 1.25rem;
-            font-weight: 700;
-            background-image: linear-gradient(to right, var(--pink), var(--purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            cursor: pointer;
-            transition: 0.4s;
-        }
-
-        #new-task-submit:hover {
-            opacity: 0.8;
-        }
-
-        #new-task-submit:active {
-            opacity: 0.6;
-        }
-
-        main {
-            flex: 1 1 0%;
-            max-width: 800px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .task-list {
-            padding: 1rem;
-        }
-
-        .task-list h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--grey);
-            margin-bottom: 1rem;
-        }
-
-        #tasks .task {
-            display: flex;
-            justify-content: space-between;
-            background-color: var(--darkest);
-            padding: 1rem;
-            border-radius: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .task .content {
-            flex: 1 1 0%;
-        }
-
-        .task .content .text {
-            color: var(--light);
-            font-size: 1.125rem;
-            width: 100%;
-            display: block;
-            transition: 0.4s;
-        }
-
-        .task .content .text:not(:read-only) {
-            color: var(--pink);
-        }
-
-        .task .actions {
-            display: flex;
-            margin: 0 -0.5rem;
-        }
-
-        .task .actions button {
-            cursor: pointer;
-            margin: 0 0.5rem;
-            font-size: 1.125rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: 0.4s;
-        }
-
-        .task .actions button:hover {
-            opacity: 0.8;
-        }
-
-        .task .actions button:active {
-            opacity: 0.6;
-        }
-
-        .task .actions .edit {
-            background-image: linear-gradient(to right, var(--pink), var(--purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .task .actions .delete {
-            color: crimson;
-        }
-    </style>
 
 
     <script>
@@ -242,7 +244,7 @@
     <div style="background-image: url('static/programming.jpeg')"></div>
 
     <header>
-        <h1>Task List 2022</h1>
+        <h1>Task and Supplies List 2022</h1>
         <h3></h3>
         <form id="new-task-form">
             <input
@@ -275,12 +277,192 @@
                         <button class="delete">Delete</button>
                     </div>
                 </div>
+                <a href="templates/login.html">
+                    <button>Login!</button>
+                </a>
 
             </div>
         </section>
     </main>
 
+
+    <div class="container">
+
+        <div class="row">
+            <form>
+                <fieldset>
+                    <legend>Item Name</legend>
+                    <input type="text" class="form-control" name="" id="item" style="align-content: center">
+
+                    <legend>Quantity</legend>
+                    <input type="number" class="form-control" id="quantity" name="">
+                    <br>
+                    <button type="button" id="insert" class="btn btn-success">Insert</button>
+
+                    <button type="button" id="create" class="btn btn-success">Create Table</button>
+
+                    <button type="button" id="remove" class="btn btn-danger">Delete Table</button>
+
+                    <p><small><b>Note:</b> Table must be created first before inserting or performing any transaction</small></p>
+                </fieldset>
+            </form>
+
+            <hr>
+            <h4>| Record |          Item           |            Amount          |</h4>
+            <table class="table table-bordered table-hover" id="itemlist">
+
+            </table>
+
+        </div>
+
     </body>
+
+    <script type="text/javascript">
+
+        var db=openDatabase("itemDB","1.0","itemDB",65535); // itemDB is the database name
+
+
+        $(function(){
+
+            loadData(); //loading our records
+
+
+
+            //CREATING TABLE STARTS HERE
+
+            $("#create").click(function(){
+                db.transaction(function(transaction){
+                    var sql="CREATE TABLE items "+
+                        "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
+                        "item VARCHAR(100) NOT NULL,"+
+                        "quantity INT(5) NOT NULL)";
+                    transaction.executeSql(sql,undefined,function(){
+                        alert("Table is created successfully");
+                    },function(){
+                        alert("Table is already being created");
+                    })
+                });
+            });
+            // CREATING TABLE ENDS HERE
+
+
+
+            //DELETING TABLE STARTS HERE
+            $("#remove").click(function(){
+
+                if(!confirm("Are you sure to delete this table?","")) return;;
+                db.transaction(function(transaction){
+                    var sql="DROP TABLE items";
+                    transaction.executeSql(sql,undefined,function(){
+                        loadData();
+                        alert("Table is deleted successfully")
+                    },function(transaction,err){
+                        alert(err.message);
+                    })
+                });
+            });
+            //DELETING TABLE ENDS HERE
+
+            $("#item").click(function(){
+                loadData();
+            })
+
+            //INSERTING DATA INTO TABLE
+
+            $("#insert").click(function(){
+                var item=$("#item").val();
+                var qty=$("#quantity").val();
+                db.transaction(function(transaction){
+                    var sql="INSERT INTO items(item,quantity) VALUES(?,?)";
+                    transaction.executeSql(sql,[item,qty],function(){
+                        loadData();
+                        alert("New item is added successfully");
+                    },function(transaction,err){
+                        alert(err.message);
+                    })
+                })
+            })
+            //INSERTING DATA ENDS HERE
+
+
+
+
+
+
+            //FUNCTION TO LOAD OUR RECORDS
+            function loadData(){
+                $("#itemlist").children().remove();
+                db.transaction(function(transaction){
+                    var sql="SELECT * FROM items ORDER BY id DESC";
+                    transaction.executeSql(sql,undefined,function(transaction,result){
+                        if(result.rows.length){
+
+                            for(var i=0;i<result.rows.length;i++){
+                                var row=result.rows.item(i);
+                                var item=row.item;
+                                var id=row.id;
+                                var quantity=row.quantity;
+                                $("#itemlist").append('<tr id="del'+id+'"><td>'+id+'</td><td>'+item+'</td><td id="newqty'+id+'">'+quantity+'</td><td><a href="#" class="btn btn-danger deleteitem" data-id="'+id+'">Delete</a> <a href="#" class="btn btn-primary updateitem" data-id="'+id+'">Update</a></td></tr>');
+                            }
+                        }else{
+                            $("#itemlist").append('<tr><td colspan="3" align="center">No Item Found</td></tr>');
+                        }
+                    },function(transaction,err){
+                        alert('No table found. Click on "Create Table" to create table now');
+                    })
+                })
+
+
+
+
+                //setTimeout was used to execute codes inside it to be loaded after records are loaded/fetched.
+
+                setTimeout(function(){
+                    $(".deleteitem").click(function(){
+                        var sure=confirm("Are you sure to delete this item?");
+                        if(sure===true){
+                            var id=$(this).data("id");
+                            db.transaction(function(transaction){
+                                var sql="DELETE FROM items where id=?";
+                                transaction.executeSql(sql,[id],function(){
+                                    $("#del"+id).fadeOut();
+                                    alert("Item is deleted successfully");
+                                },function(transaction,err){
+                                    alert(err.message);
+                                })
+                            });
+                        }
+                    })
+
+                    $(".updateitem").click(function(){
+                        var qty=prompt("Kindly enter new quantity",1);
+                        if(qty!==null){
+                            var id=$(this).data("id");
+                            db.transaction(function(transaction){
+                                var sql="UPDATE items SET quantity=? where id=?";
+                                transaction.executeSql(sql,[qty,id],function(){
+                                    $("#newqty"+id).html(qty);
+                                    alert("Item is updated successfully");
+                                },function(transaction,err){
+                                    alert(err.message);
+                                })
+                            });
+                        }
+                    })
+
+                },1000);
+
+
+            }
+            //END OF loadData() function
+
+
+
+
+        });
+
+
+    </script>
 
 {% endblock %}
 </html>

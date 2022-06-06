@@ -69,6 +69,14 @@ def cal():
 def calendar2():
     return render_template("calendar2.html")
 
+@app.route('/calendar3')
+def calendar3():
+    currentday = datetime.now().day
+    monthnum = datetime.now().month
+    currentmonth = calendar.month_name
+    currentyear = datetime.now().year
+    return render_template("calendar3.html", currentday=currentday, monthnum=monthnum, currentmonth=currentmonth, currentyear=currentyear)
+
 @app.route('/clubRoster')
 def clubRoster():
     return render_template("clubRoster.html")
@@ -76,6 +84,10 @@ def clubRoster():
 @app.route('/join')
 def join():
     return render_template("join.html")
+
+@app.route('/howtojoin')
+def howtojoin():
+    return render_template("howtojoin.html")
 
 @app.route('/tasklist')
 def tasklist():
