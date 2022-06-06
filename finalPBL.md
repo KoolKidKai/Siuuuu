@@ -44,6 +44,7 @@ Assignments (4/4):
 Total Self-Grade Assessment: 4.8/5
 
 Individual: 2/2
+I worked on the calendar with Armaan and deployed the website. For most of the weeks working, I worked on technical features for the website and helped work on a calendar that was stored locally. As well, I began a tasklist and supply list that saved additions by users to the local storage.
 
 Team: 2.8/3
 
