@@ -1,7 +1,5 @@
 {% include "layouts/layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -10,13 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- FONTS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive Mono"> <!-- a monospace -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue"> <!-- https://fonts.google.com/specimen/Bebas+Neue?category=Display -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret One"> <!-- https://fonts.google.com/specimen/Poiret+One?category=Display -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton"> <!-- https://fonts.google.com/specimen/Monoton?category=Display -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka the Great"> <!-- https://fonts.google.com/specimen/Fredericka+the+Great?category=Display -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Forum"> <!--https://fonts.google.com/specimen/Forum?category=Display -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
         p {
             font-family: Times;
@@ -71,6 +62,11 @@
             color: #218aa4;
 
         }
+        h2{
+            color: #22bf4c;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+        }
         table {
             margin-top: 20px;
             margin-bottom: 20px;
@@ -104,11 +100,6 @@
             margin-left: -40px;
             list-style-position: inside;
         }
-        @keyframes slidebg {
-            to {
-                background-position:10vw;
-            }
-        }
         button.dark {
             background-color: #363d47;
             color: #9daf9b;
@@ -124,10 +115,9 @@
         <h1>HACKCLUB PLANNER</h1>
     </div>
 
-    <p>Plan out events that can be added to all for everyone in the group! <b>Put your main events, deadlines, and important events here.</b></p>
-        <h3>Today is {{ currentmonth [monthnum] }} {{ currentday }}, {{ currentyear }}</h3>
-
-    <!-- button that leads to the repo, can style the button in css above -->
+    <h2>Plan out events for the future!</h2>
+    <h2> June 2022 </h2>
+    <h3>Date:  {{ currentmonth [monthnum] }} {{ currentday }}, {{ currentyear }}</h3>
 
     </div>
 
@@ -163,7 +153,7 @@
                         <td>
                         <p style="text-align: left"> {{j*7+i}} </p>
                         <p id="show_input{{j}}{{i}}"></p>
-                        <input placeholder="Event" class="text" id="task{{j}}{{i}}" type="text">
+                        <input placeholder="" class="text" id="task{{j}}{{i}}" type="text">
                         <button class="task" id="add_task.{{j}}{{i}}" class="task" onclick="display('{{j}}{{i}}')">Add Task</button>
                         <br>
                         <button class="task" onclick="remove('{{j}}{{i}}')">Clear</button>
